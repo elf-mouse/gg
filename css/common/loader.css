@@ -1,0 +1,79 @@
+/* animation */
+@keyframes loader-load {
+  to {
+    width: 100%;
+  }
+}
+@keyframes loader-spin {
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes loader-type {
+  0% {
+    background-color: white;
+    box-shadow: 12px 0 0 0 rgba(0, 0, 0, 0.2), 24px 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0 0 0 white, 24px 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  75% {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 12px 0 0 0 rgba(0, 0, 0, 0.2), 24px 0 0 0 white;
+  }
+}
+/* loader */
+.loader {
+  position: relative;
+  text-align: center;
+}
+.loader-el {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.loader--a {
+  overflow: hidden;
+}
+.loader--a .loader-el {
+  top: auto;
+  right: auto;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  animation: loader-load 5s linear;
+}
+.loader--b .loader-el {
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-color: white transparent;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+  animation: loader-spin 1s linear infinite;
+}
+.loader--c .loader-el {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  animation: loader-type 1s linear infinite alternate;
+}
+/* test */
+.loader--a {
+  height: 5px;
+}
+.loader--c {
+  height: 6px;
+}
+.loader-el {
+  display: block;
+}
