@@ -6,34 +6,34 @@
  */
 
 .iblock-wrap {
-	font-size: 0; /* all browsers */
-	*word-spacing: -1px; /* IE6-7 */
+  font-size: 0; /* all browsers */
+  *word-spacing: -1px; /* IE6-7 */
 }
 .iblock-wrap .iblock {
-	font-size: 14px;
-	letter-spacing: normal;
-	word-spacing: normal;
-	vertical-align: top;
+  font-size: 14px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
 }
 @media all and (min-width: 0) { /* Opera & Safari */
-	.iblock-wrap {
-		word-spacing: -1px; /* for Opera (fix Opera) */
-	}
+  .iblock-wrap {
+    word-spacing: -1px; /* for Opera (fix Opera) */
+  }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) { /* Safari */
-	/* firefox 中 letter-spacing 会导致脱离普通流的元素水平位移 */
-	.iblock-wrap {
-		letter-spacing: -5px; /* Safari 等不支持字体大小为 0 的浏览器, N 根据父级字体调节 */
-		word-spacing: 0; /* for Chrome (fix Opera) */
-	}
+  /* firefox 中 letter-spacing 会导致脱离普通流的元素水平位移 */
+  .iblock-wrap {
+    letter-spacing: -5px; /* Safari 等不支持字体大小为 0 的浏览器, N 根据父级字体调节 */
+    word-spacing: 0; /* for Chrome (fix Opera) */
+  }
 }
 .iblock {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 
 /* test */
 .iblock {
-	border: 1px solid red;
+  border: 1px solid red;
 }
