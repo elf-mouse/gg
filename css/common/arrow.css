@@ -6,22 +6,22 @@
   height: 0;
 }
 .arrow-top, .arrow-up, .arrow-top b, .arrow-up b {
-  border-color: transparent transparent red;
+  border-color: transparent transparent black;
   border-style: solid;
   border-width: 0 10px 10px;
 }
 .arrow-right, .arrow-right b {
-  border-color: transparent transparent transparent red;
+  border-color: transparent transparent transparent black;
   border-style: solid;
   border-width: 10px 0 10px 10px;
 }
 .arrow-bottom, .arrow-down, .arrow-bottom b, .arrow-down b {
-  border-color: red transparent transparent;
+  border-color: black transparent transparent;
   border-style: solid;
   border-width: 10px 10px 0;
 }
 .arrow-left, .arrow-left b {
-  border-color: transparent red transparent transparent;
+  border-color: transparent black transparent transparent;
   border-style: solid;
   border-width: 10px 10px 10px 0;
 }
@@ -40,22 +40,22 @@
 .arrow-top b, .arrow-up b {
   left: -10px;
   top: 1px;
-  border-color: transparent transparent black;
+  border-color: transparent transparent white;
 }
 .arrow-right b {
   top: -10px;
   left: -11px;
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent white;
 }
 .arrow-bottom b, .arrow-down b {
   left: -10px;
   top: -11px;
-  border-color: black transparent transparent;
+  border-color: white transparent transparent;
 }
 .arrow-left b {
   top: -10px;
   left: 1px;
-  border-color: transparent black transparent transparent;
+  border-color: transparent white transparent transparent;
 }
 
 /* test */
@@ -63,7 +63,6 @@
   position: relative;
   width: 200px;
   height: 100px;
-  background-color: black;
-  border: 1px solid red;
+  border: 1px solid black;
   margin: 50px;
 }
