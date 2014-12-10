@@ -31,10 +31,10 @@
 .grid-box--1of1 {
   width: 100%;
 }
-.grid-box--1of2, .grid-box--2of4, .grid-box--3of6, .grid-box--4of8, .grid-box--5of10, .grid-box--6of12, .video-download, .video-speed {
+.grid-box--1of2, .grid-box--2of4, .grid-box--3of6, .grid-box--4of8, .grid-box--5of10, .grid-box--6of12 {
   width: 50%;
 }
-.grid-box--1of3, .grid-box--2of6, .grid-box--4of12, .statList-item {
+.grid-box--1of3, .grid-box--2of6, .grid-box--4of12 {
   width: 33.333%;
 }
 .grid-box--2of3, .grid-box--4of6, .grid-box--8of12 {
