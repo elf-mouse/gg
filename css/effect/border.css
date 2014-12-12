@@ -1,0 +1,96 @@
+i {
+  position: relative;
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+i::before {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 88px;
+  height: 88px;
+  line-height: 88px;
+  border: 2px solid;
+  margin: 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.2s;
+}
+i::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: 88px;
+  height: 88px;
+  margin: -44px 0 0 -44px;
+  border-radius: 50%;
+  content: '';
+  background-color: white;
+  transition: transform 0.2s, opacity 0.4s;
+}
+
+/* test */
+div {
+  padding: 50px;
+}
+i {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+}
+.a::before {
+  content: 'A';
+}
+.b::before {
+  content: 'B';
+}
+
+/* content -> border */
+.red {
+  background-color: #F44336;
+}
+.red i::before {
+  background-color: white;
+  color: #F44336;
+  border-color: #F44336;
+}
+.red i::after {
+  transform: scale(1);
+  opacity: 1;
+}
+.red:hover i::before {
+  background-color: #F44336;
+  color: white;
+  border-color: white;
+}
+.red:hover i::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+/* border -> content */
+.green {
+  background-color: #4CAF50;
+}
+.green i::before {
+  background-color: #4CAF50;
+  color: white;
+  border-color: white;
+}
+.green i::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+.green:hover i::before {
+  background-color: white;
+  color: #4CAF50;
+  border-color: #4CAF50;
+}
+.green:hover i::after {
+  transform: scale(1);
+  opacity: 1;
+}
