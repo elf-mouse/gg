@@ -1,0 +1,109 @@
+/**
+ * CSS arrow
+ * 
+ * @author Elf-mousE
+ * @website http://elf-mouse.me/
+ *
+ * @usage HTML:
+ * <div class="arrow-box">
+ *   <i class="arrow arrow-{up|down|left|right}"><b></b></i>
+ * </div>
+ */
+
+@mixin arrow() {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+@mixin arrowUp($width: 0, $color: transparent) {
+  border-color: transparent transparent $color;
+  border-style: solid;
+  border-width: 0 $width $width;
+}
+@mixin arrowDown($width: 0, $color: transparent) {
+  border-color: $color transparent transparent;
+  border-style: solid;
+  border-width: $width $width 0;
+}
+@mixin arrowLeft($width: 0, $color: transparent) {
+  border-color: transparent $color transparent transparent;
+  border-style: solid;
+  border-width: $width $width $width 0;
+}
+@mixin arrowRight($width: 0, $color: transparent) {
+  border-color: transparent transparent transparent $color;
+  border-style: solid;
+  border-width: $width 0 $width $width;
+}
+
+@mixin arrowUpBg($width: 0, $color: transparent) {
+  top: -$width;
+  b {
+    left: -$width;
+    top: 1px;
+    border-color: transparent transparent $color;
+  }
+}
+@mixin arrowDownBg($width: 0, $color: transparent) {
+  bottom: -$width;
+  b {
+    left: -$width;
+    top: -$width - 1;
+    border-color: $color transparent transparent;
+  }
+}
+@mixin arrowLeftBg($width: 0, $color: transparent) {
+  left: -$width;
+  b {
+    top: -$width;
+    left: 1px;
+    border-color: transparent $color transparent transparent;
+  }
+}
+@mixin arrowRightBg($width: 0, $color: transparent) {
+  right: -$width;
+  b {
+    top: -$width;
+    left: -$width - 1;
+    border-color: transparent transparent transparent $color;
+  }
+}
+
+/* arrow */
+.arrow-box {
+  position: relative;
+}
+
+.arrow, .arrow b {
+  @include arrow();
+}
+
+.arrow-up, .arrow-up b {
+  @include arrowUp(10px, black);
+}
+.arrow-up {
+  @include arrowUpBg(10px, white);
+}
+
+.arrow-down, .arrow-down b {
+  @include arrowDown(10px, black);
+}
+.arrow-down {
+  @include arrowDownBg(10px, white);
+}
+
+.arrow-left, .arrow-left b {
+  @include arrowLeft(10px, black);
+}
+.arrow-left {
+  @include arrowLeftBg(10px, white);
+}
+
+.arrow-right, .arrow-right b {
+  @include arrowRight(10px, black);
+}
+.arrow-right {
+  @include arrowRightBg(10px, white);
+}

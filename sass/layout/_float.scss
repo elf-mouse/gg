@@ -1,0 +1,45 @@
+/**
+ * CSS float
+ * 
+ * @author Elf-mousE
+ * @website http://elf-mouse.me/
+ * 
+ * @function
+ * floatLayout($width)
+ * 
+ * @usage HTML:
+ * <div class="container clearfix">
+ *   <div class="nav"></div>
+ *   <div class="content"></div>
+ * </div>
+ * 
+ * @reference
+ * http://getbootstrap.com/
+ * http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
+ */
+
+@mixin floatLayout($width: 200px) {
+  .nav {
+    float: left;
+    width: $width;
+  }
+  .content {
+    margin-left: $width;
+  }
+}
+
+.clearfix {
+  &:before, &:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+.pull-right {
+  float: right!important;
+}
+.pull-left {
+  float: left!important;
+}

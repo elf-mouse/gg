@@ -1,0 +1,16 @@
+/**
+ * CSS margin:auto
+ * 
+ * @author Elf-mousE
+ *
+ * @function
+ * marginAuto($width)
+ */
+
+@mixin marginAuto($width: auto) {
+  @if ($width != auto) {
+    width: $width;
+    max-width: $width;
+  }
+  margin: 0 auto;
+}

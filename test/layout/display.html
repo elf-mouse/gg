@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Elf-mousE">
+  <title>css display</title>
+  <link rel="stylesheet" href="../../css/reset/universal.css">
+  <link rel="stylesheet" href="../../css/layout/display.css">
+  <link rel="stylesheet" href="../../css/debug/element.css">
+</head>
+
+<body>
+  <div class="element div">
+    <p>
+      <code>div</code> 是一个标准的块级元素。一个块级元素会新开始一行并且尽可能撑满容器。
+    </p>
+  </div>
+  <div>
+    <p>
+      <code>span</code> 是一个标准的行内元素。一个行内元素可以在段落中 <span class="element span"> 像这样 </span> 包裹一些文字而不会打乱段落的布局。
+    </p>
+  </div>
+  <div class="element div" id="margin-auto">
+    <p>设置块级元素的 width 可以阻止它从左到右撑满容器。然后你就可以设置左右外边距为 auto 来使其水平居中。元素会占据你所指定的宽度，然后剩余的宽度会一分为二成为左右外边距。</p>
+    <p>唯一的问题是，当浏览器窗口比元素的宽度还要窄时，浏览器会显示一个水平滚动条来容纳页面。</p>
+  </div>
+  <div class="element div" id="max-width">
+    <p>在这种情况下使用 max-width 替代 width 可以使浏览器更好地处理小窗口的情况。这点在移动设备上显得尤为重要，调整下浏览器窗口大小检查下吧！</p>
+    <p>顺便提下，所有的主流浏览器包括IE7+在内都支持 max-width ，所以放心大胆的用吧。</p>
+  </div>
+</body>
+
+</html>

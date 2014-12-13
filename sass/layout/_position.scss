@@ -1,0 +1,75 @@
+/**
+ * CSS position
+ * @author Elf-mousE
+ *
+ * @function
+ * position($value, $position)
+ * static()
+ * relative($position)
+ * absolute($position)
+ * fixed($position)
+ */
+
+$defaultPosition: auto auto auto auto;
+
+@mixin position($value, $position: null) {
+  @if $position == top {
+    top: $value;
+  } @else if $position == right {
+    right: $value;
+  } @else if $position == bottom {
+    bottom: $value;
+  } @else if $position == left {
+    left: $value;
+  } @else {
+    @if length($value) == 4 {
+      $top: nth($value, 1);
+      $right: nth($value, 2);
+      $bottom: nth($value, 3);
+      $left: nth($value, 4);
+      @if $top != null {
+        top: $top;
+      }
+      @if $right != null {
+        right: $right;
+      }
+      @if $bottom != null {
+        bottom: $bottom;
+      }
+      @if $left != null {
+        left: $left;
+      }
+    } @else {
+      @debug 'position.value.length != 4';
+    }
+  }
+}
+
+@mixin static() {
+  position: static;
+}
+@mixin relative($position: $defaultPosition) {
+  position: relative;
+  @include position($position);
+}
+@mixin absolute($position: $defaultPosition) {
+  position: absolute;
+  @include position($position);
+}
+@mixin fixed($position: $defaultPosition) {
+  position: fixed;
+  @include position($position);
+}
+
+.static {
+  @include static();
+}
+.relative {
+  @include relative(null null null null);
+}
+.absolute {
+  @include absolute(null null null null);
+}
+.fixed {
+  @include fixed(null null null null);
+}

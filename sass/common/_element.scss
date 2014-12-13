@@ -1,0 +1,52 @@
+/**
+ * CSS html element
+ * 
+ * @author Elf-mousE
+ * @website http://elf-mouse.me/
+ *
+ * @usage HTML:
+ * <div class="element div"></div>
+ * <span class="element span"></span>
+ */
+
+$element-color: black;
+$element-list: div span;
+$block-element-list: div;
+
+.element {
+  border: 2px solid $element-color;
+  &::before, &::after {
+    background-color: $element-color;
+    color: white;
+  }
+}
+
+@each $element in $element-list {
+  @if index($block-element-list, $element) == null { // inline
+    .#{$element} {
+      &::before {
+        content: '<#{$element}>';
+      }
+      &::after {
+        content: '</#{$element}>';
+      }
+    }
+  } @else { // block
+    .#{$element} {
+      position: relative;
+      &::before, &::after {
+        position: absolute;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        content: '<#{$element}>';
+      }
+      &::after {
+        bottom: 0;
+        right: 0;
+        content: '</#{$element}>';
+      }
+    }
+  }
+}

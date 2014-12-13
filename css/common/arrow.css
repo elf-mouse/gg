@@ -1,56 +1,64 @@
+/**
+ * CSS arrow
+ * 
+ * @author Elf-mousE
+ * @website http://elf-mouse.me/
+ *
+ * @usage HTML:
+ * <div class="arrow-box">
+ *   <i class="arrow arrow-{up|down|left|right}"><b></b></i>
+ * </div>
+ */
 /* arrow */
+.arrow-box {
+  position: relative;
+}
+
 .arrow, .arrow b {
   display: block;
   position: absolute;
   width: 0;
   height: 0;
 }
-.arrow-top, .arrow-up, .arrow-top b, .arrow-up b {
+
+.arrow-up, .arrow-up b {
   border-color: transparent transparent black;
   border-style: solid;
   border-width: 0 10px 10px;
 }
-.arrow-right, .arrow-right b {
-  border-color: transparent transparent transparent black;
-  border-style: solid;
-  border-width: 10px 0 10px 10px;
+
+.arrow-up {
+  top: -10px;
 }
-.arrow-bottom, .arrow-down, .arrow-bottom b, .arrow-down b {
+.arrow-up b {
+  left: -10px;
+  top: 1px;
+  border-color: transparent transparent white;
+}
+
+.arrow-down, .arrow-down b {
   border-color: black transparent transparent;
   border-style: solid;
   border-width: 10px 10px 0;
 }
+
+.arrow-down {
+  bottom: -10px;
+}
+.arrow-down b {
+  left: -10px;
+  top: -11px;
+  border-color: white transparent transparent;
+}
+
 .arrow-left, .arrow-left b {
   border-color: transparent black transparent transparent;
   border-style: solid;
   border-width: 10px 10px 10px 0;
 }
-.arrow-top, .arrow-up {
-  top: -10px;
-}
-.arrow-right {
-  right: -10px;
-}
-.arrow-bottom, .arrow-down {
-  bottom: -10px;
-}
+
 .arrow-left {
   left: -10px;
-}
-.arrow-top b, .arrow-up b {
-  left: -10px;
-  top: 1px;
-  border-color: transparent transparent white;
-}
-.arrow-right b {
-  top: -10px;
-  left: -11px;
-  border-color: transparent transparent transparent white;
-}
-.arrow-bottom b, .arrow-down b {
-  left: -10px;
-  top: -11px;
-  border-color: white transparent transparent;
 }
 .arrow-left b {
   top: -10px;
@@ -58,9 +66,23 @@
   border-color: transparent white transparent transparent;
 }
 
+.arrow-right, .arrow-right b {
+  border-color: transparent transparent transparent black;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+}
+
+.arrow-right {
+  right: -10px;
+}
+.arrow-right b {
+  top: -10px;
+  left: -11px;
+  border-color: transparent transparent transparent white;
+}
+
 /* test */
-.box {
-  position: relative;
+.arrow-box {
   width: 200px;
   height: 100px;
   border: 1px solid black;

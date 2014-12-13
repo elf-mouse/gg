@@ -1,0 +1,15 @@
+/**
+ * CSS column (for text)
+ * 
+ * @author Elf-mousE
+ * @website http://elf-mouse.me/
+ * 
+ * @function
+ * boxColumns($count, $gap)
+ */
+
+@mixin boxColumns($count: 1, $gap: 0) {
+  -webkit-column-count: $count;  -webkit-column-gap: $gap; /* Chrome, Safari 3 */
+     -moz-column-count: $count;     -moz-column-gap: $gap; /* Firefox 3.5+ */
+          column-count: $count;          column-gap: $gap; /* Opera 11+ */
+}

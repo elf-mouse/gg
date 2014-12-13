@@ -13,34 +13,31 @@
  * 
  * @reference: http://ued.taobao.org/blog/2012/08/inline-block/
  */
+
 .iblock-wrap {
-  font-size: 0;
-  /* all browsers */
-  *word-spacing: -1px;
-  /* IE6-7 */
-}
-.iblock-wrap .iblock {
-  font-size: 14px;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
+  font-size: 0; /* all browsers */
+  *word-spacing: -1px; /* IE6-7 */
+  .iblock {
+    font-size: 14px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+  }
 }
 
-@media all and (min-width: 0) {
-  /* Opera & Safari */
+@media all and (min-width: 0) { /* Opera & Safari */
   .iblock-wrap {
-    word-spacing: -1px;
-    /* for Opera (fix Opera) */
+    word-spacing: -1px; /* for Opera (fix Opera) */
   }
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* Safari */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) { /* Safari */
   .iblock-wrap {
     letter-spacing: -5px;
-    word-spacing: 0;
-    /* for Chrome (fix Opera) */
+    word-spacing: 0; /* for Chrome (fix Opera) */
   }
 }
+
 .iblock {
   display: inline-block;
   *display: inline;

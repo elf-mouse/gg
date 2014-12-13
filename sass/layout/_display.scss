@@ -1,0 +1,36 @@
+/**
+ * CSS display
+ * 
+ * @author Elf-mousE
+ * @website http://elf-mouse.me/
+ * 
+ * @reference http://getbootstrap.com/
+ */
+
+.hide {
+  display: none!important;
+}
+.show {
+  display: block!important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
+
+.inline {
+  display: inline;
+}
+.block {
+  display: block;
+}
