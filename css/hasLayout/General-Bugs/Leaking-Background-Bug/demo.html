@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Leaking Background Bug</title>
+        <style type="text/css">
+            #container {
+                background: #abc;
+            }
+            #bugger {
+                float: left;
+                width: 30%;
+            }
+
+            .clearer {
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p id="bugger">
+                Floated
+            </p>
+            <p>
+                Text
+            </p>
+            <div class="clearer"></div>
+        </div>
+        <div id="victim">
+            Give me some of that background!!!
+        </div>
+    </body>
+</html>

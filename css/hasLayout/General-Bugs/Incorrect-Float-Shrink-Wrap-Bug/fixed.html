@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Incorrect Float Shrink-Wrap Bug Fixed Demo - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        html, body {
+            background: #fff;
+            color: #000;
+        }
+
+        div {
+            background-color: #ddd;
+            border: 1px solid green;
+            clear: left;
+            color: black;
+            float: left;
+        }
+        .ie_fix {
+            display: inline-block;
+        }
+        .ie_fix {
+            display: block;
+        }
+
+    </style>
+
+    <div>
+        Here is a &lt;div&gt; having float: left and clear: left. As expected,
+        it takes, it occupies as much width it requires from the body's content
+        area.
+    </div>
+    <span class="ie_fix"></span>
+    <div>
+        This is the same type of &lt;div&gt; : a left-floated &lt;div&gt; with
+        clear: left. This &lt;div&gt; should use, should take, should occupy
+        the whole content area of the body node (expected results). However, in
+        Internet Explorer 7, this left-floated &lt;div&gt; with clear: left only
+        takes, only occupies a very narrow chunk of the body's content area
+        (actual results). More text filling. More text filling. More text
+        filling. More text filling. More text filling.
+    </div>
+    <span class="ie_fix"></span>
+    <div>
+        Here, a third &lt;div&gt; having float: left and clear: left. Change
+        your browser window viewport's width.
+    </div>
+
+    <ul>
+        <li>
+            <div>
+                Here is a &lt;div&gt; having float: left and clear: left. As expected,
+                it takes, it occupies as much width it requires from the body's content
+                area.
+            </div>
+        </li>
+
+        <li>
+            <div>
+                This is the same type of &lt;div&gt; : a left-floated &lt;div&gt; with
+                clear: left. This &lt;div&gt; should use, should take, should occupy
+                the whole content area of the body node (expected results). However, in
+                Internet Explorer 7, this left-floated &lt;div&gt; with clear: left only
+                takes, only occupies a very narrow chunk of the body's content area
+                (actual results). More text filling. More text filling. More text
+                filling. More text filling. More text filling.
+            </div>
+        </li>
+
+        <li>
+            <div>
+                Here, a third &lt;div&gt; having float: left and clear: left. Change
+                your browser window viewport's width.
+            </div>
+        </li>
+    </ul>

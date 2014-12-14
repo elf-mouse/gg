@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>No Transparency Click Bug Fixed Demo - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        body {
+            padding: 50px;
+            background: #fff url(checkers.gif);
+            color: #000;
+        }
+
+        a {
+            display: block;
+            background: url(ring.png) no-repeat;
+            width: 100px;
+            height: 100px;
+            text-indent: -999px;
+        }
+    </style>
+
+    <!--[if lte IE 8]>
+    <style type="text/css">
+    a {
+    background: url(#); /* or point to a transparent gif. EDIT: see comments */
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="ring.png",sizingMethod="scale");
+    }
+    </style>
+    <![endif]-->
+
+    <div>
+        <a href="#">Lorem Ipsum</a>
+    </div>
+

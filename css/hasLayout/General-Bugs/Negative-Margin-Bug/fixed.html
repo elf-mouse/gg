@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Leaking Background Bug</title>
+        <style type="text/css">
+            #container {
+                padding: 2em 0;
+                margin: 2em 10% .5em; /* 10% left and right margins, no width */
+            }
+            #inner {
+                margin: -4em 2em 0; /* negative margin is used */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="inner">
+                I am cut off
+                <br>
+                Text
+                <br>
+                More text
+                <br>
+            </div>
+        </div>
+    </body>
+</html>

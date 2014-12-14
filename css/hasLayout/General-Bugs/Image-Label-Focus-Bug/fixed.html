@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Image Label Focus Bug Fixed Demo CMS - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        html, body {
+            background: #fff;
+            color: #000;
+        }
+
+        li {
+            overflow: hidden;
+            display: inline-block; /* gives layout for IE float clearing */
+        }
+        li {
+            display: block;
+        }
+
+        label {
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        label span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 500px;
+            height: 500px;
+            background: url(hl_logo.png) no-repeat -5000px;
+        }
+
+        img {
+            border: 1px solid #000;
+        } /* unrelated to the bug; just to make image more visible */
+
+    </style>
+
+    <form action="">
+        <ul>
+            <li>
+                <label for="one"><span></span><img src="hl_logo.png" alt=""></label>
+                <input type="text" id="one">
+            </li>
+            <li>
+                <label for="two"><span></span><img src="hl_logo.png" alt=""></label>
+                <textarea cols="10" rows="3" id="two"> </textarea>
+            </li>
+            <li>
+                <label for="three"><span></span><img src="hl_logo.png" alt=""></label>
+                <input type="checkbox" id="three">
+            </li>
+            <li>
+                <label for="four"><span></span><img src="hl_logo.png" alt=""></label>
+                <input type="radio" name="foo" id="four">
+            </li>
+            <li>
+                <label for="five"><span></span><img src="hl_logo.png" alt=""></label>
+                <input type="radio" name="foo" id="five">
+            </li>
+        </ul>
+    </form>

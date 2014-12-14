@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Form Control Double Margin Bug Demo - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        html, body {
+            background: #fff;
+            color: #000;
+        }
+
+        div {
+            width: 100%; /* gives "layout" ( http://haslayout.net/haslayout ) */
+            margin-left: 100px;
+        }
+
+    </style>
+
+    <form action="">
+        <div>
+            <input type="text" name="ber">
+            <br>
+            <textarea cols="10" rows="5" name="baz"> </textarea>
+            <br>
+            <select name="ber">
+                <option>foo</option>
+            </select>
+            <br>
+        </div>
+    </form>

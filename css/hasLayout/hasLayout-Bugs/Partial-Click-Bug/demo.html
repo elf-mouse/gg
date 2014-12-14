@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Partial Click Bug</title>
+        <style type="text/css">
+            div {
+                float: left;
+                width: 90%;
+                clear: left;
+                background: #DDD;
+                color: black;
+                border: 3px solid black;
+            }
+            a {
+                display: block;
+                text-align: center;
+            }
+        </style>
+        <!--[if lte IE 6]>
+        <style type="text/css">
+        a {
+        zoom: 1;
+        position: relative; /* IE5 needs this */
+        }
+        </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div>
+            <a href="#">Demo link!</a>
+        </div>
+    </body>
+</html>

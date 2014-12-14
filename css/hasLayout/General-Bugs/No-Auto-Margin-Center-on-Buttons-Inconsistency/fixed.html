@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>No Auto-Margin Center on Buttons Inconsistency Fixed Demo CS - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        html, body {
+            background: #fff;
+            color: #000;
+        }
+
+        button, select, input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto;
+        }
+
+        button, input[type="submit"], input[type="button"] {
+            width: 20em;
+        }
+
+    </style>
+
+    <form action="">
+        <div>
+            <button>
+                This button should be centered
+            </button>
+            <input type="button" value="This button should be centered">
+            <input type="text">
+            <input type="checkbox">
+            <input type="radio">
+            <input type="submit" value="This button should be centered">
+            <input type="file">
+            <select>
+                <option>test</option>
+            </select>
+        </div>
+    </form>

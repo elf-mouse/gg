@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Ignored :focus Bug Fixed Demo - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background: #fff;
+            color: #000;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        :focus + p {
+            font-weight: bold;
+            font-size: 200%;
+        }
+        :focus {
+        }
+
+    </style>
+
+    <div>
+        <button>
+            Click me so I'd get focus!
+        </button>
+        <p>
+            Test 2
+        </p>
+    </div>

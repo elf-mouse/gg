@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Internet Explorer CSS Bugs</title>
+</head>
+
+<body>
+
+  <div class="entry">
+    <div class="entry_top">
+      <div class="entry_bottom">
+        <h3 id="general_bugs">General Bugs</h3>
+        <p>
+          This section contains
+          <abbr title="Internet Explorer">IE</abbr>
+          bugs that don't quite fit into other section or can be classified into two or more sections at the same time.
+        </p>
+        <table border="1" summary="Listing of general Internet Explorer bugs not suitable for other sections or fitting in several sections at the same time">
+          <caption>
+            General Internet Explorer
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+            Bugs
+          </caption>
+          <thead>
+            <tr>
+              <th>Bug Name</th>
+              <th>Affected Versions</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="General-Bugs/Image-Label-Focus-Bug/demo.html" target="_blank" title="'Image Label Focus Bug' tutorial">Image
+									Label Focus Bug</a>(<a href="General-Bugs/Image-Label-Focus-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">&lt;img&gt; elements that are inside &lt;label&gt; elements, when clicked, do not cause the focus to be transfered to corresponding form control.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/No-Auto-Margin-Center-on-Buttons-Inconsistency/demo.html" target="_blank" title="'No Auto-Margin Center on Buttons Inconsistency' tutorial">No
+									Auto-Margin Center on Buttons Inconsistency</a>(<a href="General-Bugs/No-Auto-Margin-Center-on-Buttons-Inconsistency/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">Button-like elements do not get centered when { display: block; margin-left: auto; margin-right: auto; } applied on them and `width` is not explicitly set</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Incorrect-Float-Shrink-Wrap-Bug/demo.html" target="_blank" title="'Incorrect Float Shrink-Wrap Bug' tutorial">Incorrect
+									Float Shrink-Wrap Bug</a>(<a href="General-Bugs/Incorrect-Float-Shrink-Wrap-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Floated elements that follow other floated elements and have `clear` set do not shrink-wrap correctly</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Document-Scrollbars-Overflow-Inconsistency/demo.html" target="_blank" title="'Document Scrollbars Overflow Inconsistency' tutorial">Document
+									Scrollbars Overflow Inconsistency</a>(<a href="General-Bugs/Document-Scrollbars-Overflow-Inconsistency/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Unconventional default value for `overflow` on &lt;html&gt; element that may appear as a bug with regard to `overflow` on &lt;body&gt;.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Float-Squeeze-Weird-Gap-Bug/demo.html" target="_blank" title="'Float Squeeze Weird Gap Bug' tutorial">Float
+									Squeeze Weird Gap Bug</a>(<a href="General-Bugs/Float-Squeeze-Weird-Gap-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">A gap appears between last and second last floated elements that are stacked vertically.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Float-Squeeze-Duplicate-Last-Character-Bug/demo.html" target="_blank" title="'Float Squeeze Duplicate Last Character Bug' tutorial">Float
+									Squeeze Duplicate Last Character Bug</a>(<a href="General-Bugs/Float-Squeeze-Duplicate-Last-Character-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Last character of a floated element is duplicated.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Empty-Element-Height-Bug/demo.html" target="_blank" title="'Empty Element Height Bug' tutorial">Empty
+									Element Height Bug</a>(<a href="General-Bugs/Empty-Element-Height-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Empty elements that have &quot;layout&quot; obtain height</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Form-Control-Double-Margin-Bug/demo.html" target="_blank" title="'Form Control Double Margin Bug' tutorial">Form Control
+									Double Margin Bug</a>(<a href="General-Bugs/Form-Control-Double-Margin-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">horizontal margins on &lt;input&gt; and &lt;textarea&gt; elements are &quot;inherited&quot; from the ascendant with a margin and &quot;layout&quot;
+              </td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/IE7-1px-Dotted-Border-Appears-As-Dashed-Bug/demo.html" target="_blank" title="'IE7 1px Dotted Border Appears As Dashed Bug' tutorial">IE7
+									1px Dotted Border Appears As Dashed Bug</a>(<a href="General-Bugs/IE7-1px-Dotted-Border-Appears-As-Dashed-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7</td>
+              <td class="bugTableDescription">1 pixel dotted border appears as dashed when at least one of the border sides is styled of a width larger than 1px</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Relative-Overflow-Failure-Bug/demo.html" target="_blank" title="'Relative Overflow Failure Bug' tutorial">Relative
+									Overflow Failure Bug</a>(<a href="General-Bugs/Relative-Overflow-Failure-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Elements with `overflow` set to either `hidden` or `auto` behave as if overflow was set to `visible` when descendants that are causing overflow have position: relative set on them</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/IE7-Broken-hover-Absolute-Bug/demo.html" target="_blank" title="'IE7 &quot;Broken&quot; :hover Absolute Bug' tutorial">IE7
+									&quot;Broken&quot; :hover Absolute Bug</a>(<a href="General-Bugs/IE7-Broken-hover-Absolute-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7</td>
+              <td class="bugTableDescription">:hover that changes left/top offsets of an absolutely positioned descendant does not appear to &quot;work&quot; if the element is hidden out of the view; if it&#39;s visible, the left/top offsets do not change on :hover</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Button-Background-Shift-On-active-Bug/demo.html" target="_blank" title="'Button Background Shift On :active Bug' tutorial">Button
+									Background Shift On :active Bug</a>(<a href="General-Bugs/Button-Background-Shift-On-active-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">Background shifts up and to the left on :active state when applied to &lt;button&gt; or &lt;input type=&quot;submit&quot;&gt;</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Ignored--focus-Bug/demo.html" target="_blank" title="'Ignored :focus Bug' tutorial">Ignored
+									:focus Bug</a>(<a href="General-Bugs/Ignored--focus-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">A ruleset, selector of which contains :focus that is followed by another simple selector, is ignored</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Invisible-Hover-Border-Bug/demo.html" target="_blank" title="'Invisible Hover Border Bug' tutorial">Invisible
+									Hover Border Bug</a>(<a href="General-Bugs/Invisible-Hover-Border-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">Bottom border on :hover state either does not appear completely or is 1 pixel short (or cancels out outline) when outline is set</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Percentage-Padding-Margin-Bug/demo.html" target="_blank" title="'Percentage Padding Margin Bug' tutorial">Percentage
+									Padding Margin Bug</a>(<a href="General-Bugs/Percentage-Padding-Margin-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">Vertical margins appear to collapse upon a specific combination of vertical padding set in percentages as well as border or padding set on the parent&#39;s parent</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Image-Float-Bullet-Chaos-Bug/demo.html" target="_blank" title="'Image Float Bullet Chaos Bug' tutorial">Image
+									Float Bullet Chaos Bug</a>(<a href="General-Bugs/Image-Float-Bullet-Chaos-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">Incorrect position or no rendering at all of list markers (bullets) when list items have floated images</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Non-Inherited-TH-Text-Align-Bug/demo.html" target="_blank" title="'Non-Inherited TH Text-Align Bug' tutorial">Non-Inherited
+									TH Text-Align Bug</a>(<a href="General-Bugs/Non-Inherited-TH-Text-Align-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">text-align value of ascendant isn’t inherited by the TH element</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/32-Styles-Limitation/demo.html" target="_blank" title="'32 Styles Limitation' tutorial">32
+									Styles Limitation</a>(<a href="General-Bugs/32-Styles-Limitation/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">Styles are ignored when they are set in the 32nd (or later) style method (i.e. &lt;style&gt;, &lt;link&gt; or @import)</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Hover-White-Background-Ignore-Bug/demo.html" target="_blank" title="'Hover White Background Ignore Bug' tutorial">Hover White
+									Background Ignore Bug</a>(<a href="General-Bugs/Hover-White-Background-Ignore-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7</td>
+              <td class="bugTableDescription">background does not change on :hover</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/IE7-Child-Selector-Comment-Bug/demo.html" target="_blank" title="'IE7 Child Selector Comment Bug' tutorial">IE7 Child
+									Selector Comment Bug</a>(<a href="General-Bugs/IE7-Child-Selector-Comment-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7</td>
+              <td class="bugTableDescription">A selector containing child selector that is followed by a comment is ignored</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Star-HTML-Bug/demo.html" target="_blank" title="'Star HTML Bug' tutorial">Star HTML Bug</a>(<a href="General-Bugs/Star-HTML-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">* html selector is not ignored in IE6 (due to unversal selector being ignored when it&#39;s the first part of the selector)</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/IE6--important-Ignore-Bug/demo.html" target="_blank" title="'IE6 !important Ignore Bug' tutorial">IE6
+									!important Ignore Bug</a>(<a href="General-Bugs/IE6--important-Ignore-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">!important keyword is being ignored when the same rule is set again later in the same ruleset</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/PNG-Image-and-Background-Color-Mismatch/demo.html" target="_blank" title="'PNG Image and Background Color Mismatch' tutorial">PNG
+									Image and Background Color Mismatch</a>(<a href="General-Bugs/PNG-Image-and-Background-Color-Mismatch/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">Colors specified in CSS differ from the ones used in PNG images despite having the same color code</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/No-Auto-Margin-Center-Pseudo-Bug/demo.html" target="_blank" title="'No Auto Margin Center Pseudo-Bug' tutorial">No Auto
+									Margin Center Pseudo-Bug</a>(<a href="General-Bugs/No-Auto-Margin-Center-Pseudo-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">side margins set to value `auto` do not center a block-level element</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/First-line--important-Rule-Ignore-Bug/demo.html" target="_blank" title="':first-line !important Rule Ignore Bug' tutorial">:first-line
+									!important Rule Ignore Bug</a>(<a href="General-Bugs/First-line--important-Rule-Ignore-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">rules inside :first-line pseudo-class are completely ignored when !important modifier is used</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/First-letter-Ignore-Bug/demo.html" target="_blank" title="':first-letter Ignore Bug' tutorial">:first-letter
+									Ignore Bug</a>(<a href="General-Bugs/First-letter-Ignore-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">The entire :first-letter ruleset is ignored</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/First-letter--important-Rule-Ignore-Bug/demo.html" target="_blank" title="':first-letter !important Rule Ignore Bug' tutorial">:first-letter
+									!important Rule Ignore Bug</a>(<a href="General-Bugs/First-letter--important-Rule-Ignore-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">rules inside :first-letter pseudo-class are completely ignored when !important modifier is used</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Partial-Click-Bug-v2/demo.html" target="_blank" title="'Partial Click Bug v2' tutorial">Partial
+									Click Bug v2</a>(<a href="General-Bugs/Partial-Click-Bug-v2/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">only text is clickable/reactant to :hover on links [(optional) until the mouse cursor rolls over the actual text]</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Staircase-Bug/demo.html" target="_blank" title="'Staircase Bug' tutorial">Staircase Bug</a>(<a href="General-Bugs/Staircase-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Floated elements stack up like a staircase</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Disappearing-List-Background-Bug/demo.html" target="_blank" title="'Disappearing List Background Bug' tutorial">Disappearing
+									List Background Bug</a>(<a href="General-Bugs/Disappearing-List-Background-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Background on &lt;li&gt;, &lt;dt&gt;, &lt;dd&gt; disappears</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Noscript-Ghost-Bug/demo.html" target="_blank" title="'noscript Ghost Bug' tutorial">noscript
+									Ghost Bug</a>(<a href="General-Bugs/Noscript-Ghost-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">&lt;noscript&gt; elements shows up when scripting is enabled; only borders/background is showing from it</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/No-Transparency-Click-Bug/demo.html" target="_blank" title="'No Transparency Click Bug' tutorial">No
+									Transparency Click Bug</a>(<a href="General-Bugs/No-Transparency-Click-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">transparent areas of background image on links is not clickable when `filter` is used to fix PNG transparency</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/List-Drop-Shift-Bug/demo.html" target="_blank" title="'List Drop Shift Bug' tutorial">List Drop
+									Shift Bug</a>(<a href="General-Bugs/List-Drop-Shift-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8</td>
+              <td class="bugTableDescription">Stuff in &lt;li&gt;s drops down below the bullet</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/No-Increase-on--ol--Numbers-Bug/demo.html" target="_blank" title="'No Increase on &lt;ol&gt; Numbers Bug' tutorial">No
+									Increase on &lt;ol&gt; Numbers Bug</a>
+              </td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">The numbers on &lt;ol&gt; elements do not increase on subsequent &lt;li&gt;s</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/No-Bullets-on--ul--and--ol--Bug/demo.html" target="_blank" title="'No Bullets on &lt;ul&gt; and &lt;ol&gt; Bug' tutorial">No
+									Bullets on &lt;ul&gt; and &lt;ol&gt; Bug</a>(<a href="General-Bugs/No-Bullets-on--ul--and--ol--Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Bullets/numbers disappear from &lt;ul&gt; and &lt;ol&gt; elements</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/No-line-height-Vertical-Center-on-Images-Bug/demo.html" target="_blank" title="'No line-height Vertical Center on Images Bug' tutorial">No line-height Vertical Center on Images Bug</a>(<a href="General-Bugs/No-line-height-Vertical-Center-on-Images-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Images are not vertically centered using line-height method</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/No-Background-Image-Bug/demo.html" target="_blank" title="'No Background Image Bug' tutorial">No Background Image Bug</a>(<a href="General-Bugs/No-Background-Image-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">No background appears in IE when background image is used (using `background` shorthand property)</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Custom-Cursor-Bug/demo.html" target="_blank" title="'Custom Cursor Bug' tutorial">Custom
+									Cursor Bug</a>(<a href="General-Bugs/Custom-Cursor-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">custom cursors do not appear in IE</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Leaking-Background-Bug/demo.html" target="_blank" title="'Leaking Background Bug' tutorial">Leaking Background Bug</a>(<a href="General-Bugs/Leaking-Background-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Background leaks out from the element onto other elements that are next in the flow.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Expanding-Height-Bug/demo.html" target="_blank" title="'Expanding Height Bug' tutorial">Expanding Height Bug</a>(<a href="General-Bugs/Expanding-Height-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Element is longer than the specified height (mostly applies to small heights).</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Expanding-Width-Bug/demo.html" target="_blank" title="'Expanding Width Bug' tutorial">Expanding Width Bug</a>(<a href="General-Bugs/Expanding-Width-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Element is wider than the specified width.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Double-Margin-Bug/demo.html" target="_blank" title="'Double Margin Bug' tutorial">Double Margin Bug</a>
+              </td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Left and right margins are doubled on floated elements.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Negative-Margin-Bug/demo.html" target="_blank" title="'Negative Margin Bug' tutorial">Negative
+									Margin Bug</a>(<a href="General-Bugs/Negative-Margin-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">Part of the element that is outside the container disappears when negative margins are used</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Italics-Float-Bug/demo.html" target="_blank" title="'Italics Float Bug' tutorial">Italics
+									Float Bug</a>(<a href="General-Bugs/Italics-Float-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Element drops below floated element with italized text.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/3px-Gap-Bug-aka-Text-Jog-Bug/demo.html" target="_blank" title="'3px Gap Bug aka Text Jog Bug' tutorial">3px
+									Gap Bug aka Text Jog Bug</a>(<a href="General-Bugs/3px-Gap-Bug-aka-Text-Jog-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Elements next to a floated one either have a three pixel gap or drop below or keep shifting when several elements are floated.</td>
+            </tr>
+            <tr>
+              <td><a href="General-Bugs/Text-Align-Bug/demo.html" target="_blank" title="'Text-Align Bug' tutorial">Text-Align Bug</a>(<a href="General-Bugs/Text-Align-Bug/fixed.html" target="_blank">Fixed</a>
+                <a href="General-Bugs/Text-Align-Bug/fixed2.html" target="_blank">Fixed2</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">text-align property affects block-level elements</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="entry">
+    <div class="entry_top">
+      <div class="entry_bottom">
+        <h3 id="layout_bugs">hasLayout Bugs</h3>
+        <p>
+          <abbr title="Internet Explorer">IE</abbr> bugs that are caused by elements having or not having <a href="http://haslayout.net/haslayout" title="All about IE hasLayout">&quot;layout&quot;</a>
+        </p>
+        <table border="1" summary="Listing of Internet Explorer bugs that are caused by hasLayout">
+          <caption>
+            hasLayout Internet Explorer
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+            Bugs
+          </caption>
+          <thead>
+            <tr>
+              <th>Bug Name</th>
+              <th>Affected Versions</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="hasLayout-Bugs/Scared-of-Floats-Bug/demo.html" target="_blank" title="'Scared of Floats Bug' tutorial">Scared of Floats Bug</a>(<a href="hasLayout-Bugs/Scared-of-Floats-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE7, IE6</td>
+              <td class="bugTableDescription">elements with layout clear floats instead of going around floated elements</td>
+            </tr>
+            <tr>
+              <td><a href="hasLayout-Bugs/Border-Chaos-Bug/demo.html" target="_blank" title="'Border Chaos Bug' tutorial">Border Chaos Bug</a>(<a href="hasLayout-Bugs/Border-Chaos-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">borders displayed chaotically; e.g. drawn where not should be or missing</td>
+            </tr>
+            <tr>
+              <td><a href="hasLayout-Bugs/Sub-Hover-Bug/demo.html" target="_blank" title="'Sub-Hover Bug' tutorial">Sub-Hover Bug</a>(<a href="hasLayout-Bugs/Sub-Hover-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Rules with selectors such as a:hover foo{} do not &quot;work&quot;</td>
+            </tr>
+            <tr>
+              <td><a href="hasLayout-Bugs/Partial-Click-Bug/demo.html" target="_blank" title="'Partial Click Bug' tutorial">Partial Click Bug</a>
+              </td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Only text is clickable on links (&lt;a&gt;) that are styled with display: block and thus have extra clickable area in standard compliant browsers</td>
+            </tr>
+            <tr>
+              <td><a href="hasLayout-Bugs/Disappearing-Content-Bug/demo.html" target="_blank" title="'Disappearing Content Bug' tutorial">Disappearing Content Bug</a>(<a href="hasLayout-Bugs/Disappearing-Content-Bug/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Some content disappears and reappears on scrolling or window transformation as well as minimizing and maximazing of the window.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="entry">
+    <div class="entry_top">
+      <div class="entry_bottom">
+        <h3 id="support">No Support Workarounds</h3>
+        <p>
+          Various workarounds producing effect of properties and property values which are not implemented in
+          <abbr title="Internet Explorer">IE</abbr>.
+        </p>
+        <table border="1" summary="Listing of workarounds for properties and property values which are not supported in Internet Explorer">
+          <caption>No Support Workarounds</caption>
+          <thead>
+            <tr>
+              <th>Workaround Name</th>
+              <th>Affected Versions</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="No-Support-Workarounds/No-Child-Selector-Support-Workaround/demo.html" target="_blank" title="'No Child Selector Support Workaround' tutorial">No Child Selector Support Workaround</a>(<a href="No-Support-Workarounds/No-Child-Selector-Support-Workaround/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">Child selector is ignored</td>
+            </tr>
+            <tr>
+              <td><a href="No-Support-Workarounds/Max-Height-Workaround/demo.html" target="_blank" title="'Max-Height Workaround' tutorial">Max-Height Workaround</a>(<a href="No-Support-Workarounds/Max-Height-Workaround/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">max-height is not supported</td>
+            </tr>
+            <tr>
+              <td><a href="No-Support-Workarounds/Max-Width-Workaround/demo.html" target="_blank" title="'Max-Width Workaround' tutorial">Max-Width Workaround</a>(<a href="No-Support-Workarounds/Max-Width-Workaround/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">max-width is not supported</td>
+            </tr>
+            <tr>
+              <td><a href="No-Support-Workarounds/Opacity/demo.html" target="_blank" title="'Opacity' tutorial">Opacity</a>
+              </td>
+              <td class="bugAffectedBrowsers">IE8, IE7, IE6</td>
+              <td class="bugTableDescription">opacity property is not supported</td>
+            </tr>
+            <tr>
+              <td><a href="No-Support-Workarounds/Min-Width-Workaround/demo.html" target="_blank" title="'Min-Width Workaround' tutorial">Min-Width Workaround</a>(<a href="No-Support-Workarounds/Min-Width-Workaround/fixed.html" target="_blank">Fixed</a>)</td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">min-width property is not supported</td>
+            </tr>
+            <tr>
+              <td><a href="No-Support-Workarounds/Min-Height-Workaround/demo.html" target="_blank" title="'Min-Height Workaround' tutorial">Min-Height Workaround</a>
+              </td>
+              <td class="bugAffectedBrowsers">IE6</td>
+              <td class="bugTableDescription">min-height property is ignored</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

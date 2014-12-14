@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Leaking Background Bug</title>
+        <style type="text/css">
+            #container, #container2, #container3, #container4 {
+                width: 500px;
+                overflow: hidden; /* just containing floats */
+            }
+            #bugger, #bugger2, #bugger3 {
+                float: left;
+                width: 300px;
+                background: #65A5E1;
+            }
+            #bugger3 {
+                background: none;
+                border-right: 1px solid #000;
+            }
+            #victim {
+                width: 200px;
+                margin-left: 300px;
+            }
+            #victim2 {
+                height: 1.5em; /* just to give "layout" */
+                margin-left: 300px;
+            }
+            #bugger4 {
+                float: right;
+                width: 300px;
+            }
+            #victim4 {
+                width: 200px;
+                margin-right: 300px;
+            }
+        </style>
+        <!--[if lte IE 6]>
+        <style type="text/css">
+        #bugger,
+        #bugger2,
+        #bugger3 { margin-right: -3px; }
+
+        #bugger4 { margin-left: -3px; }
+
+        #victim,
+        #victim2 { margin-left: 0; }
+
+        #victim4 { margin-right: 0; }
+        </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="container">
+            <div id="bugger">
+                Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit.
+            </div>
+            <div id="victim">
+                *cry*
+            </div>
+        </div>
+
+        <div id="container2">
+            <div id="bugger2">
+                Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit.
+            </div>
+            <div id="victim2">
+                *cry*
+            </div>
+        </div>
+
+        <div id="container3">
+            <div id="bugger3">
+                Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit.
+            </div>
+            <div id="victim3">
+                *cry*
+            </div>
+        </div>
+
+        <div id="container4">
+            <div id="bugger4">
+                Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit.
+            </div>
+            <div id="victim4">
+                *cry*
+            </div>
+        </div>
+    </body>
+</html>

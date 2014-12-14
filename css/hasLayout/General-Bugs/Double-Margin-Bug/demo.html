@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Leaking Background Bug</title>
+        <style type="text/css">
+            #container {
+                overflow: hidden; /* contain float - irrelevant to the bug */
+            }
+            #inner {
+                float: left;
+                margin-left: 2em;
+                _display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            123456789012345678901234567890
+            <br>
+            <div id="inner">
+                test
+            </div>
+        </div>
+    </body>
+</html>

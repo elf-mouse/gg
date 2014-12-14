@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>No line-height Vertical Center on Images Bug</title>
+        <style type="text/css">
+            div {
+                width: 150px;
+                height: 155px;
+                line-height: 155px;
+                border: 1px solid #000;
+                background: #f00;
+                text-align: center;
+            }
+            img {
+                vertical-align: middle;
+            }
+            span {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="hl_logo.png" alt="" width="95" height="115">
+            <span></span>
+        </div>
+
+        <!-- NOTE: <span> is not needed for IE7; whitespace is enough -->
+    </body>
+</html>

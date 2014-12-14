@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Leaking Background Bug</title>
+        <style type="text/css">
+            div {
+                height: 3px;
+                background: #dd0;
+                overflow: hidden;
+            }
+            #text {
+                margin: 10px 0;
+            } /* irrelevant to the bug */
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div id="text">
+            Lorem
+        </div>
+    </body>
+</html>

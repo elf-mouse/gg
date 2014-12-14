@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Opacity &amp; filter:alpha</title>
+        <style>
+            #main {
+                background: #000;
+                width: 500px;
+                height: 100px;
+                opacity: .2;
+            }
+        </style>
+        <!--[if lte IE 8]>
+        <style>
+        #main {
+            filter: alpha(opacity=20);
+        }
+        </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="main"></div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Border Chaos Bug Fixed Demo - haslayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        body {
+            background: #fff;
+            color: #000;
+        }
+
+        #wrapper {
+            border: 3px solid #000;
+        }
+        #one {
+            border: 1px solid #0f0;
+        }
+        #two {
+            border: 1px solid #00f;
+            margin-top: -1px;
+        }
+
+    </style>
+
+    <!--[if lte IE 6]>
+    <style type="text/css">
+    #wrapper { zoom: 1; }
+    </style>
+    <![endif]-->
+
+    <div id="wrapper">
+        <div id="one">
+            foo
+        </div>
+        <div>
+            foo bar
+        </div>
+        <div id="two">
+            bar
+        </div>
+    </div>

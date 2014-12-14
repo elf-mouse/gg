@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Text-Align Bug (Clean Markup Solution)</title>
+        <style type="text/css">
+            p {
+                width: 50%;
+            }
+            #fixed1, #fixed2 {
+                width: auto;
+                text-align: center;
+            }
+            #fixed2 {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container1">
+            <p id="fixed1">
+                Give me the aligns!
+            </p>
+            <p>
+                Oh noes!
+            </p>
+        </div>
+        <div id="container2">
+            <p id="fixed2">
+                Give me the aligns!
+            </p>
+            <p>
+                Oh noes!
+            </p>
+        </div>
+    </body>
+</html>

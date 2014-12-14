@@ -1,0 +1,7 @@
+div {
+    height: 500px;
+    width: 500px;
+    margin: 20px auto;
+    cursor: url(cursor.cur), crosshair;
+    background: #f00;
+} 

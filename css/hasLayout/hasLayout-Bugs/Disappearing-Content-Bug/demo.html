@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Disappearing Content Bug</title>
+        <style type="text/css">
+            #container {
+                background: #ABC;
+            }
+            #bugger {
+                float: left;
+                width: 40%;
+            }
+            .clearer {
+                clear: both;
+            }
+        </style>
+        <!--[if lte IE 6]>
+        <style type="text/css">
+        #container { zoom: 1; }
+        </style>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="container">
+            <p id="bugger">
+                Enough text to make this
+                element longer than the
+                height of the #container
+            </p>
+            <p id="disappearing">
+                This text will be disappearing
+            </p>
+            <div class="clearer"></div>
+            <p id="helper">
+                I am more important than the text!
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>noscript Ghost Bug Fixed Demo - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        body {
+            background: #fff;
+            color: #000;
+        }
+
+        noscript {
+            border: 5px solid #000;
+            background: #f00;
+            display: block;
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+
+    <script type="text/javascript">
+					window.onload= function() {
+					var els=document.getElementsByTagName('noscript');
+					for(var i=0;i<els.length;i++) {
+					els[i].style.display='none';
+					}
+					}
+    </script>
+
+    <div>
+        bar
+    </div>
+    <noscript>
+        CAN HAS SKRIPTZ! PLZ??! KTNX!
+    </noscript>

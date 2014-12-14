@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Text-Align Bug (Clean Solution)</title>
+        <style type="text/css">
+            /* contain float - irrelevant to the bug, but something you might need to do */
+            div {
+                overflow: hidden;
+                display: inline-block;
+            }
+            div {
+                display: block;
+            }/* restore original display, IE hasLayout method */
+            /* END of float containing */
+            #container1 {
+                text-align: center;
+            }
+            #container2 {
+                text-align: right;
+            }
+            p {
+                width: 50%;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container1">
+            Give me the aligns!
+            <p>
+                Oh noes!
+            </p>
+        </div>
+        <div id="container2">
+            Give me the aligns!
+            <p>
+                Oh noes!
+            </p>
+        </div>
+    </body>
+</html>

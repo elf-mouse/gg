@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Percentage Padding Magin Collapse Bug Fixed Demo - hasLayout.net by Zoffix Znet</title>
+
+    <style type="text/css">
+        #container {
+            background: red;
+            border: 3px solid #000;
+        }
+
+        #middle-man {
+            background: #ddd;
+            padding: 5% 0;
+            overflow: hidden;
+        }
+
+        p {
+            margin: 100px 0;
+        }
+
+    </style>
+
+    <div id="container">
+        <div id="middle-man">
+            <p>
+                There should be no red color in this page
+            </p>
+        </div>
+    </div>

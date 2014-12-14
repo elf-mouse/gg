@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Leaking Background Bug</title>
+        <style type="text/css">
+            #container {
+                width: 500px;
+                overflow: hidden; /* just containing floats */
+            }
+            #bugger {
+                float: left;
+                width: 300px;
+                font-style: italic;
+            }
+            #victim {
+                width: 200px;
+                height: 200px; /* just to make bug more obvious */
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="bugger">
+                Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Suspendisse vel
+                velit at ipsum tristique porttitor. Suspendisse
+                potenti. Nam non arcu sit amet nulla volutpat
+                bibendum. Aenean eget metus. Nulla elit.
+                Quisque aliquam luctus diam. Curabitur at
+                lectus. In hac habitasse platea dictumst.
+                Nam ultrices porttitor dolor. Morbi metus.
+                Praesent et nulla at pede elementum consectetuer.
+                Donec sapie...
+            </div>
+            <div id="victim">
+                *cry*
+            </div>
+        </div>
+    </body>
+</html>

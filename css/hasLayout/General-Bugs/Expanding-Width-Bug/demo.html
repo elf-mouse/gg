@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Leaking Background Bug</title>
+        <style type="text/css">
+            #container-1 {
+                width: 10em;
+                margin: 1em 0;
+            }
+            #container-2 {
+                width: 10em;
+                margin: 1em 0;
+                /* styling info - not normally included in demo
+                 code but is shown here to demonstrate a very common, real-life example */
+                background: #ddd;
+                color: #000;
+                border: 3px solid #000;
+            }
+            #inner {
+                width: 300%; /* excessive width will cause overflow */
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Demo 1: Long String</h2>
+        <div id="container-1">
+            12345678910123456789101234567891011121314
+        </div>
+        <hr>
+        <h2>Demo 2: Overflowing Descendant</h2>
+        <div id="container-2">
+            <div id="inner">
+                Try to spot it!
+            </div>
+        </div>
+    </body>
+</html>
