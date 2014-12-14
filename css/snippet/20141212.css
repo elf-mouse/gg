@@ -1,0 +1,99 @@
+/* 1. 垂直对齐 */
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 2. 元素拉伸为全屏高度 */
+html, body {
+  height: 100%;
+}
+
+/* 3. 根据文件格式引用不同样式 */
+a[href^="http://"] {
+  padding-right: 20px;
+  background: url("external.gif") no-repeat center right;
+}
+a[href^="mailto:"] {
+  padding-right: 20px;
+  background: url("email.png") no-repeat center right;
+}
+a[href$=".pdf"] {
+  padding-right: 20px;
+  background: url("pdf.png") no-repeat center right;
+}
+
+/* 4. 跨浏览器图像灰度 */
+img {
+  filter: url("grayscale.svg"); /* Firefox 3.5+ */
+  filter: gray; /* IE 6-9 */
+  -webkit-filter: grayscale(1); /* Chrome, Safari 6+ & Opera 15+ */
+}
+
+/* 5. 动画背景 */
+button {
+  background-image: linear-gradient(#5187c4, #1c2f45);
+  background-size: auto 200%;
+  background-position: 0 100%;
+  transition: background-position 0.5s;
+}
+button:hover {
+  background-position: 0 0;
+}
+
+/* 6. CSS列表自动宽度 */
+td {
+  white-space: nowrap;
+}
+
+/* 7. 显示阴影 */
+.box-shadow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 90px;
+  margin: -80px 0 0 -45px;
+  background-color: #FF8020;
+}
+.box-shadow:after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  width: 150px;
+  height: 1px;
+  margin: -88px 0 0 -75px;
+  content: "";
+  box-shadow: 0 0 8px 2px #000000;
+}
+
+/* 8. 长文本封装 */
+pre {
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+/* 9. 模糊文本 */
+.blurry-text {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 10. 使用CSS制作动画省略号 */
+@keyframes ellipsis {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 15px;
+  }
+}
+.loading:after {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  content: "\2026"; /* ASCII code for the ellipsis character */
+  animation: ellipsis 2s infinite;
+}
