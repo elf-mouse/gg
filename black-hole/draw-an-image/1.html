@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Single Element with Multiple Backgrounds</title>
+<style>
+#logo {
+  position: relative;
+  font-size: 60px;
+  width: 4em;
+  height: 2em;
+  background: -moz-radial-gradient(center, ellipse, rgba(255, 255, 255, 1) 40%,transparent 41%,transparent 100%),
+              -moz-radial-gradient(center, ellipse, rgba(0, 0, 0, 1) 40%,transparent 41%,transparent 100%),
+              -moz-radial-gradient(center, ellipse, rgba(255, 255, 255, 1) 40%,transparent 41%,transparent 100%),
+              -moz-radial-gradient(center, ellipse, rgba(237, 128, 39, 1) 40%,transparent 41%,transparent 100%);
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 1) 40%,transparent 41%,transparent 100%),
+              -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 1) 40%,transparent 41%,transparent 100%),
+              -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 1) 40%,transparent 41%,transparent 100%),
+              -webkit-radial-gradient(center, ellipse, rgba(237, 128, 39, 1) 40%,transparent 41%,transparent 100%);
+  background: radial-gradient(center, ellipse, rgba(255, 255, 255, 1) 40%,transparent 41%,transparent 100%),
+              radial-gradient(center, ellipse, rgba(0, 0, 0, 1) 40%,transparent 41%,transparent 100%),
+              radial-gradient(center, ellipse, rgba(255, 255, 255, 1) 40%,transparent 41%,transparent 100%),
+              radial-gradient(center, ellipse, rgba(237, 128, 39, 1) 40%,transparent 41%,transparent 100%);
+  background-position: 0.3em 0.75em,
+                       -0.6em 0.35em,
+                       1.4em 0.6em,
+                       1.05em 0.15em;
+  background-size: 1.7em 1.0em,
+                   3em 1.9em,
+                   1.7em 1.0em,
+                   3em 1.9em;
+  background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+<div id="logo"></div>
+</body>
+</html>

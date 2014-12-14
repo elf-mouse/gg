@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>珠神之战</title>
+<link rel="stylesheet" href="themes/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="scroll">
+        <div class="light"></div>
+        <div class="box_top"></div>
+        <div class="prev" id="prev"></div>
+        <div class="box">
+            <div class="outline">
+                <ul class="slide clearfix" id="slide">
+                    <li><img src="themes/img/img01.jpg" alt=""></li>
+                    <li><img src="themes/img/img02.jpg" alt=""></li>
+                    <li><img src="themes/img/img03.jpg" alt=""></li>
+                    <li><img src="themes/img/img04.jpg" alt=""></li>
+                    <li><img src="themes/img/img05.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="next" id="next"></div>
+    </div>
+</div>
+<script src="themes/slide.js"></script>
+<!--[if lt IE 7]>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="themes/jquery.iepngfix.js"></script>
+<script>
+$(function(){
+    $('#prev,#next').fixPNG();
+});
+</script>
+<![endif]-->
+</body>
+</html>

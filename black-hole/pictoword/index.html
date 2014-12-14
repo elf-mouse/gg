@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>疯狂猜图</title>
+        <meta name="description" content="好玩的看图猜词游戏，知识面大考验，脑力激荡～">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/ui.progress-bar.css" />
+        <link rel="stylesheet" href="css/main.css">
+        <script>var _hmt = _hmt || [];</script>
+    </head>
+    <body onload="init();">
+        <!--[if lte IE 7]>
+            <style>#page-start{display:none;}</style>
+            <p class="chromeframe">您的浏览器不支持疯狂猜图HTML5版本</p>
+            <a href="#" class="btn btn-success" target="_blank" onclick="_hmt.push(['_trackEvent', 'AppDownload', 'click']);"><big>在AppStore下载完整版</big><br/><small>支持iPad iPhone</small></a>
+	        <a href="#" class="btn btn-success" target="_blank" onclick="_hmt.push(['_trackEvent', 'AppDownload', 'click']);"><big>下载Android完整版</big></a>
+		    <a class="btn btn-info" href="#" target="_blank" onclick="_hmt.push(['_trackEvent', 'FollowWechat', 'click']);"><big>关注微信: fengkuangcaitu</big><br /><small>每天都有新题目</small></a>
+        <![endif]-->
+        
+        <!-- Add your site or application content here -->
+        <div id="page-start" class="page current-page" >
+	        <div class="header-container">
+	            <header class="wrapper clearfix">
+                    <a class="btn btn-info btn-left btn-hide" href="#">返回</a>
+	                <h1 class="title">疯狂猜图</h1>
+	                <a class="btn btn-info btn-openHelpPannel"><i class="icon-more icon"></i></a>
+	            </header>
+	        </div>
+	
+	        <div class="main-container">
+	            <div class="main wrapper clearfix">
+	            	<article>
+	            		<div id="start-icon">
+		                    <div id="start-level">0</div>
+	                    </div>
+	            	</article>
+	            	<aside class="loading">
+	                    <a id="start-btnPlay" class="btn btn-success btn-big">Play</a>
+	            	</aside>
+	            </div> <!-- #main -->
+	        </div> 
+
+	        <div class="footer-container">
+	            <footer class="wrapper"></footer>
+	        </div>
+        </div><!-- #page-start -->
+        <div id="page-play" class="page none">
+	        <div class="header-container">
+	            <header class="wrapper clearfix">
+                    <a class="btn btn-info btn-left btn-hide" href="#">返回</a>
+	                <a id="play-level">0</a>
+		            <a class="btn btn-info btn-openHelpPannel"><i class="icon-more icon"></i></a>
+	            </header>
+	        </div>
+	
+	        <div class="main-container">
+	            <div class="main wrapper clearfix">
+	            	<div id="questions"></div>
+	            </div> <!-- #main -->
+	        </div> 
+	        <div id="play-success">
+	        	<div class="main wrapper clearfix">
+	        		<section id="play-success-title">答案正确</section>
+	        		<section id="play-success-level">0</section>
+	        		<section id="play-success-answer"></section>
+	        		<section id="play-success-action">
+	        			<a id="play-success-share" class="btn btn-info btn-openHelpPannel "><i class="icon-more icon"></i> 别点这里！</a>
+	        			<a id="play-success-next" class="btn btn-success">下一题</a>	        			
+	        		</section>
+	        	</div>
+	        </div>
+        </div><!-- #page-play -->
+
+        <div id="page-preload" class="page none">
+        	<div class="header-container">
+	            <header class="wrapper clearfix">
+	                <h1 class="title">疯狂猜图</h1>
+	            </header>
+	        </div>
+	         <div class="main-container">
+	            <div class="main wrapper clearfix">
+	            	<div id="progress_bar_container">
+		            <div id="progress_bar" class="ui-progress-bar ui-container">
+		                <div class="ui-progress" style="display:none;">
+		                <span class="ui-label" style="display:none;">Processing <b class="value"></b></span>
+		                </div><!-- .ui-progress -->
+		            </div><!-- #progress_bar -->
+		        	</div>
+		        	<div id="preload-ad">
+		        	</div>
+	            </div>
+	         </div>
+        </div>
+        <!--#page-finish  -->
+        <div id="page-finish" class="page none">
+        	<div class="header-container">
+	            <header class="wrapper clearfix">
+                    <a class="btn btn-info btn-left btn-hide" href="#">返回</a>
+	                <h1 class="title">疯狂猜图</h1>
+	            </header>
+	        </div>
+	        <div class="main-container">
+	            <div class="main wrapper clearfix">
+	            <article>
+	                <div id="start-icon"></div>
+	            </article>
+	            <aside>
+	            <h3>恭喜你！答完了！</h3>
+	            <p>但是....下面有更多题目等着你！</p>
+	        	<a href="#" class="btn btn-success" target="_blank" onclick="_hmt.push(['_trackEvent', 'AppDownload', 'click']);"><big>在AppStore下载完整版</big><br/><small>支持iPad iPhone</small></a>
+	        	<a href="#" class="btn btn-success" target="_blank" onclick="_hmt.push(['_trackEvent', 'AppDownload', 'click']);"><big>下载Android完整版</big></a>
+		        <a class="btn btn-info" href="#" target="_blank" onclick="_hmt.push(['_trackEvent', 'FollowWechat', 'click']);"><big>关注微信: fengkuangcaitu</big><br /><small>每天都有新题目</small></a>
+		        <hr />
+		        <a class="btn btnCopyUrl"><i class="icon-url icon"></i> 拷贝游戏地址</a>
+	            </aside>
+	            </div>
+	         </div>
+        </div>
+        <!--#page-finish  -->
+        <div id="pannel-overlay" class="none">
+	        <div id="pannel-help" class="pannel">
+	        	<h4>分享“疯狂猜图"！</h4>
+	        	<div class="weixin none">点击右上方的<img src="img/weixin-share.jpg" width="50px" height="27px" alt="分享按钮">，或者</div>
+	        	<div><a class="btn btnCopyUrl"><i class="icon-url icon"></i> 拷贝游戏地址</a></div>
+	        	<h4>想要更多题目？</h4>
+	        	<a href="#" class="btn btn-success" target="_blank" onclick="_hmt.push(['_trackEvent', 'AppDownload', 'click']);"><i class="icon-ipad icon"></i><big>AppStore下载完整版</big><br/><small>支持iPad iPhone</small></a>
+	        	<a href="#" class="btn btn-success" target="_blank" onclick="_hmt.push(['_trackEvent', 'AppDownload', 'click']);"><i class="icon-ipad icon"></i><big>下载Android完整版</big></a>
+		        <a class="btn btn-info" href="#" target="_blank" onclick="_hmt.push(['_trackEvent', 'FollowWechat', 'click']);"><i class="icon-wechat icon"></i><big>关注微信: <br/>fengkuangcaitu</big><br /><small>每天都有新题目</small></a>
+		        <h4>关于我们</h4>
+		        <a class="credit clearfix" href="http://www.hortor.net" target="_blank"><img src="img/hortorlogo.png" /><span>Copyright 2013 Hortor Games<br />豪腾嘉科 版权所有</span></a>
+		        <a class="credit clearfix" href="http://www.seemeloo.com" target="_blank"><img src="img/smllogo.png" /><span>HTML技术支持<br />西米露工作室</span></a>
+	        </div>
+        </div>
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/mustache.js"></script>
+        <script src="js/vendor/webtoolkit.sprintf.js"></script>
+        <script src="js/vendor/preloadjs-0.3.1.min.js"></script>
+        <script src="js/Util.js"></script>
+        <script src="js/ptwUI.js"></script>
+        <script src="js/State.js"></script>
+        <script src="js/Question.js"></script>
+        <script src="js/PreloadState.js"></script>
+        <script src="js/MenuState.js"></script>
+        <script src="js/InGameState.js"></script>
+        <script src="js/FinishState.js"></script>
+        <script src="js/Controller.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/x-jQuery-tmpl" id="questionTmpl">
+        <div class='question none' id='question-{{ID}}'>
+	        <article>
+		    <div class='question-pic'>
+		        <img src='{{imageUrl}}' alt='question' />
+		        <div class='question-type'>{{category}}</div>
+		    </div>
+		    <ul class='question-answer clearfix'>
+                {{#answerArray}}
+                <li data-key='' class='answer-key'></li>
+                {{/answerArray}}
+		    </ul>
+		    <hr />
+	        </article>
+	        <aside>
+		    <ul class='question-keyboard clearfix'>
+                {{#keyboardArray}}
+                <li data-key='{{value}}' data-index='{{index}}' class='question-key'>{{value}}</li>
+                {{/keyboardArray}}
+		    </ul>
+	        </aside>
+	        <div class="clearfix" id="play-next">
+            <input id='answer-{{ID}}' type='text'/>
+            <input class='btnNextQuestion' type='button' value='下一题'></input>
+            </div>
+	    </div>
+        </script>
+    </body>
+</html>
