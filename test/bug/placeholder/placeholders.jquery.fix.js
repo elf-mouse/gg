@@ -485,73 +485,82 @@
       return originalPropFn.apply(this, arguments);
     };
 
-    // Returns the version of Internet Explorer or a -1
-    // (indicating the use of another browser).
-    function getIEVersion() {
-      var rv = -1; // Return value assumes failure.
-      if (navigator.appName == 'Microsoft Internet Explorer') {
-        var ua = navigator.userAgent;
-        var re = new RegExp('MSIE ([0-9]{1,}[\.0-9]{0,})');
-        var documentMode = document.documentMode;
-        if (re.exec(ua) != null)
-          rv = parseFloat(RegExp.$1);
-        rv = documentMode < rv ? documentMode : rv;
+    /**
+     * fix type="password" for IE8- (* values)
+     * @author Elf-mousE
+     * @website http://elf-mouse.me/
+     * @since 2014.07.24
+     * @updated 2014.08.16
+     */
+    (function($) {
+      // Returns the version of Internet Explorer or a -1
+      // (indicating the use of another browser).
+      function getIEVersion() {
+        var rv = -1; // Return value assumes failure.
+        if (navigator.appName == 'Microsoft Internet Explorer') {
+          var ua = navigator.userAgent;
+          var re = new RegExp('MSIE ([0-9]{1,}[\.0-9]{0,})');
+          var documentMode = document.documentMode;
+          if (re.exec(ua) != null)
+            rv = parseFloat(RegExp.$1);
+          rv = documentMode < rv ? documentMode : rv;
+        }
+        return rv;
       }
-      return rv;
-    }
 
-    // Polyfill for IE8-
-    if (!String.prototype.trim) {
-      (function() {
-        // Make sure we trim BOM and NBSP
-        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-        String.prototype.trim = function() {
-          return this.replace(rtrim, "");
-        }
-      })();
-    }
+      var IE = getIEVersion(),
+        lteIE8 = (IE <= 8) ? true : false,
+        lteIE7 = (IE <= 7) ? true : false;
 
-    var IE = getIEVersion(),
-      lteIE8 = (IE <= 8) ? true : false,
-      lteIE7 = (IE <= 7) ? true : false;
+      //fix IE8- for * value
+      if (lteIE8) {
+        if (!String.prototype.trim) {
+          (function() {
+            // Make sure we trim BOM and NBSP
+            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+            String.prototype.trim = function() {
+              return this.replace(rtrim, "");
+            }
+          })();
+        }
 
-    //fix IE8- for * value (by Elf-mousE 2014.07.24, updated 2014.08.16)
-    if (lteIE8) {
-      $('input[type="password"]').each(function() {
-        var $input = $(this),
-          $placeholder = $input.parent().css('position', 'relative').append('<span class="placeholder-mask">' + $input.data('placeholder-value') + '</span>').find('.placeholder-mask'),
-          css = {
-            display: 'block',
-            position: 'absolute',
-            top: $input.position().top,
-            left: $input.position().left,
-            width: $input.width(),
-            height: $input.height(),
-            overflow: 'hidden',
-            margin: $input.css('margin'),
-            padding: $input.css('padding'),
-            border: '1px solid ' + $input.css('border-color'),
-            'background-color': $input.css('background-color'),
-            color: '#cfd8dc',
-            'line-height': $input.css('line-height'),
-            'font-size': $input.css('font-size'),
-            'font-style': 'normal'
-          };
-        if (lteIE7) {
-          css['line-height'] = '18px'; // 临时修复
-        }
-        $placeholder.css(css);
-      });
-      $('.placeholder-mask').on('click', function() {
-        $(this).hide().prev().focus();
-      });
-      $('input[type="password"]').on('focusout', function() {
-        var $input = $(this);
-        if ($input.val().trim() === '') {
-          $input.next().show();
-        }
-      });
-    }
+        $('input[type="password"]').each(function() {
+          var $input = $(this),
+            $placeholder = $input.parent().css('position', 'relative').append('<span class="placeholder-mask">' + $input.data('placeholder-value') + '</span>').find('.placeholder-mask'),
+            css = {
+              display: 'block',
+              position: 'absolute',
+              top: $input.position().top,
+              left: $input.position().left,
+              width: $input.width(),
+              height: $input.height(),
+              overflow: 'hidden',
+              margin: $input.css('margin'),
+              padding: $input.css('padding'),
+              border: '1px solid ' + $input.css('border-color'),
+              'background-color': $input.css('background-color'),
+              color: '#cfd8dc',
+              'line-height': $input.css('line-height'),
+              'font-size': $input.css('font-size'),
+              'font-style': 'normal'
+            };
+          $placeholder.css(css);
+        });
+
+        $('.placeholder-mask').on('click', function() {
+          $(this).hide().prev().focus();
+        });
+
+        $('input[type="password"]').on('focusout', function() {
+          var $input = $(this);
+          if ($input.val().trim() === '') {
+            $input.next().show();
+          }
+        });
+
+      }
+    })($);
+
   }
 
 }(jQuery));

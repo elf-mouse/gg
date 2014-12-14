@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hello Google Map</title>
+<style>
+html {
+    height: 100%
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+#map-canvas {
+    width: 100%;
+    height: 100%
+}
+</style>
+</head>
+<body>
+    <div id="map-canvas"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_APPKEY&sensor=false"></script>
+    <script>
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(31.238176, 121.46927),
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    }
+    window.onload = initialize();
+    </script>
+</body>
+</html>
