@@ -1,0 +1,32 @@
+/**
+ * Both Horizontally and Vertically
+ *
+ * child  - bothCenterFixed($width, $height);
+ * child  - bothCenterUnknown();
+ * parent - bothCenterFlex();
+ */
+
+// for child (parent - position: relative;)
+@mixin bothCenterFixed($width, $height) { // all
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $width;
+  height: $height;
+  margin: (-$height/2) 0 0 (-$width/2);
+}
+
+// for child (parent - position: relative;)
+@mixin bothCenterUnknown() { // IE 10+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// for parent
+@mixin bothCenterFlex() { // IE 10+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

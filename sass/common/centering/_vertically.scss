@@ -1,0 +1,74 @@
+/**
+ * Vertically
+ *
+ * child - middleLink($value);
+ * child - middleText($value);
+ *
+ * child  - middleTable();
+ * parent - middleFlex();
+ *
+ * child - middleFixed($height);
+ * child - middleUnknown();
+ */
+
+// single line
+
+@mixin middleLink($value: 0) { // all
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin middleText($value: 0) { // IE 8+
+  height: $value;
+  line-height: $value;
+  white-space: nowrap;
+}
+
+// multiple lines
+
+// for child (parent - display: table;)
+@mixin middleTable() { // IE 8+
+  display: table-cell;
+  vertical-align: middle; // <td> default is vertical-align: middle;
+}
+
+// for parent
+@mixin middleFlex() { // IE 10+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin middleByGhost() { // IE 9+
+  .parent {
+    position: relative;
+    &::before {
+      content: " ";
+      display: inline-block;
+      width: 1%;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .child {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// block
+
+// for child (parent - position: relative;)
+@mixin middleFixed($height) { // all
+  position: absolute;
+  top: 50%;
+  height: $height;
+  margin-top: -$height/2; // account for padding and border if not using box-sizing: border-box;
+}
+
+// for child (parent - position: relative;)
+@mixin middleUnknown() { // IE 10+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
