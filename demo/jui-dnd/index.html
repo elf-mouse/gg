@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Elf-mousE">
+  <title>jQueryUI Dnd</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <div class="container clearfix">
+    <div class="pull-left" id="available-widgets">
+      <div id="widget-list">
+        <div class="widget" data-id="1">Widget1</div>
+        <div class="widget" data-id="2">Widget2</div>
+        <div class="widget" data-id="3">Widget3</div>
+      </div>
+    </div>
+    <div class="pull-right" id="block-list">
+      <div class="widgets-holder-wrap">
+        <div class="widgets-sortables" id="block-1">
+          <div class="block-title">Block title 1</div>
+          <div class="block-description">Block description 1</div>
+        </div>
+      </div>
+      <div class="widgets-holder-wrap">
+        <div class="widgets-sortables" id="block-2">
+          <div class="block-title">Block title 2</div>
+          <div class="block-description">Block description 2</div>
+        </div>
+      </div>
+      <div class="widgets-holder-wrap">
+        <div class="widgets-sortables" id="block-3">
+          <div class="block-title">Block title 3</div>
+          <div class="block-description">Block description 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../scripts/bower_components/jquery/dist/jquery.js"></script>
+  <!-- JUI 1.10.4 please -->
+  <script src="../../scripts/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
