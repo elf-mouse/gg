@@ -1,0 +1,40 @@
+body {
+  background-color: #000;
+  overflow: hidden;
+}
+.snowbg {
+  width: 510px;
+  height: 516px;
+  position: absolute;
+  top: 40px;
+}
+.snowleft {
+  left: 0px;
+  z-index: 1;
+  background: url(images/index/snowright.png) -20px 0 no-repeat;
+}
+.snowright {
+  right: 0px;
+  z-index: 1;
+  background: url(images/index/snowright.png) 30px 0 no-repeat;
+}
+.shengdanTOP {
+  width: 1009px;
+  height: 80px;
+  background: url(images/index/shengdanTOP.png) no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -505px;
+  z-index: 0;
+}
+.shengdanHat {
+  width: 45px;
+  height: 43px;
+  background: url(images/index/hat.png) no-repeat;
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  margin-left: -520px;
+  z-index: 99999;
+}
