@@ -12,12 +12,12 @@ Author: N.[Elf-mousE](http://elf-mouse.me/)
 `gem -v`
 
 * [Sass](http://sass-lang.com/install)
-> #### install
+>
     gem install sass
     sass -v
 
 * [Compass](http://compass-style.org/)
-> #### install
+>
     $ gem update --system
     $ gem install compass
     $ compass -v

@@ -1,5 +1,7 @@
 # Development tools (Windows)
 
+Author: N.[Elf-mousE](http://elf-mouse.me/)
+
 ## Browser
 * [Google Chrome](http://www.google.com/chrome)
 * [Mozilla Firefox](http://www.mozilla.com/firefox/)
@@ -21,8 +23,9 @@
 * [Navicat](http://www.navicat.com/)
 
 ## Other Tools
-* [Filezilla](http://filezilla.sourceforge.net/)
-* [SecureCRT](http://www.vandyke.com/products/securecrt/)
 * [Subversion](http://subversion.apache.org/)
+* [Filezilla](http://filezilla.sourceforge.net/)
+* [Fiddler](http://www.telerik.com/fiddler)
+* [SecureCRT](http://www.vandyke.com/products/securecrt/)
 * [VisualSVN Server](https://www.visualsvn.com/server/)
 * [VMware Workstation](http://www.vmware.com/products/workstation/)
