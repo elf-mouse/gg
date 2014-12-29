@@ -15,7 +15,7 @@ Author: N.[Elf-mousE](http://elf-mouse.me/)
 > `gem install sass`  
 > `sass -v`
 
-* [Compass](http://compass-style.org/)
+* [Compass](http://compass-style.org/) | [manual](http://rubygems.org/gems/compass) (`gem install --local C:\Users\{USERNAME}\Downloads\{RUNTIME DEPENDENCIES}.gem`)
 > `$ gem update --system`  
 > `$ gem install compass`  
 > `compass -v`
@@ -29,7 +29,7 @@ Author: N.[Elf-mousE](http://elf-mouse.me/)
 * [Node.js](http://nodejs.org/)
 > C:\nodejs\  
 > C:\nodejs\node_global  
-> C:\Users\\{username}\AppData\Roaming\npm  
+> C:\Users\\{USERNAME}\AppData\Roaming\npm  
 > `node -v`  
 > `npm -v`
 
