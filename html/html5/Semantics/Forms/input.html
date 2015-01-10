@@ -1,0 +1,66 @@
+<form id="form1" novalidate="novalidate">
+  <fieldset>
+    <legend>Form 1</legend>
+    <p>
+      <label for="text">text2</label>
+      <input id="text" name="text2" type="text" form="form2" maxlength="4" required>
+    </p>
+    <hr>
+    <p>
+      <label for="search">search</label>
+      <input id="search" name="search" type="search" list="browsers">
+      <datalist id="browsers">
+        <option value="Chrome">
+          <option value="Firefox">
+            <option value="Internet Explorer">
+              <option value="Opera">
+                <option value="Safari">
+      </datalist>
+    </p>
+    <p>
+      <label for="mobile">mobile</label>
+      <input id="mobile" name="mobile" type="tel" pattern="^1[0-9]{10}$">
+    </p>
+    <p>
+      <label for="url">url</label>
+      <input id="url" name="url" type="url">
+    </p>
+    <p>
+      <label for="email">email</label>
+      <input id="email" name="email" type="email" title="Please, provide an e-mail" x-moz-errormessage="Please specify a valid email address.">
+    </p>
+    <p>
+      <input type="submit" value="input submit" formaction="test.php" formenctype="multipart/form-data" formmethod="post">
+    </p>
+  </fieldset>
+</form>
+
+<form id="form2">
+  <fieldset>
+    <legend>Form 2</legend>
+    <p>
+      <label for="text">text1</label>
+      <input id="text" name="text1" type="text" form="form1" placeholder="Please input here" autofocus>
+    </p>
+    <p>
+      <input type="checkbox" name="chk" value="yes" checked> Do you want the newsletter
+    </p>
+    <p>
+      <input type="radio" name="sex" value="male">Male
+      <br>
+      <input type="radio" name="sex" value="female">Female
+      <br>
+      <input type="radio" name="sex" value="other">Other
+    </p>
+    <button type="submit" formaction="test.php" formmethod="get">button submit</button>
+  </fieldset>
+</form>
+
+<form oninput="result.value=parseInt(number.value)+parseInt(range.value)">
+  <fieldset>
+    <legend>Form output</legend>
+    <input type="number" name="number" value="100"> +
+    <input type="range" name="range" min="0" max="20" step="2" value="10"> =
+    <output name="result"></output>
+  </fieldset>
+</form>
