@@ -1,0 +1,46 @@
+<script>
+/**
+ * Step 2 – Handling the server response
+ *
+ * httpRequest.readyState:
+ * 0 (uninitialized)
+ * 1 (loading)
+ * 2 (loaded)
+ * 3 (interactive)
+ * 4 (complete)
+ *
+ * httpRequest.responseText – returns the server response as a string of text
+ * httpRequest.responseXML – returns the response as an XMLDocument object you can traverse using the JavaScript DOM functions
+ */
+var httpRequest;
+if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
+  httpRequest = new XMLHttpRequest();
+} else if (window.ActiveXObject) { // IE 6 and older
+  httpRequest = new ActiveXObject('Microsoft.XMLHTTP');
+}
+
+httpRequest.onreadystatechange = nameOfTheFunction; // process the server response
+
+function nameOfTheFunction() {
+  console.info(httpRequest.readyState);
+  if (httpRequest.readyState === 4) {
+    // everything is good, the response is received
+    if (httpRequest.status === 200) {
+      // perfect!
+      console.info('string:');
+      console.log(httpRequest.responseText);
+      console.info('object:');
+      console.log(JSON.parse(httpRequest.responseText));
+    } else {
+      // there was a problem with the request,
+      // for example the response may contain a 404 (Not Found)
+      // or 500 (Internal Server Error) response code
+    }
+  } else {
+    // still not ready
+  }
+}
+
+httpRequest.open('GET', 'test.php');
+httpRequest.send();
+</script>
