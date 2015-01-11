@@ -1,0 +1,146 @@
+/**
+ * Color
+ * Red: Passion, Love, Anger
+ * Orange: Energy, Happiness, Vitality
+ * Yellow: Happiness, Hope, Deceit
+ * Green: New Beginnings, Abundance, Nature
+ * Blue: Calm, Responsible, Sadness
+ * Purple: Creativity, Royalty, Wealth
+ * Black: Mystery, Elegance, Evil
+ * Gray: Moody, Conservative, Formality
+ * White: Purity, Cleanliness, Virtue
+ * Brown: Nature, Wholesomeness, Dependability
+ * Tan or Beige: Conservative, Piety, Dull
+ * Cream or Ivory: Calm, Elegant, Purity
+ */
+$black: #000000;
+$white: #FFFFFF;
+$gray: gray;
+
+$red: #FF0000;
+$green: #00FF00;
+$blue: #0000FF;
+
+/**
+ * https://www.google.com/design/spec/style/color.html
+ */
+$red-500: #F44336;
+$pink-500: #E91E63;
+$purple-500: #9C27B0;
+$deepPurple-500: #673AB7;
+$indigo-500: #3F51B5;
+$blue-500: #2196F3;
+$lightBlue-500: #03A9F4;
+$cyan-500: #00BCD4;
+$teal-500: #009688;
+$green-500: #4CAF50;
+$lightGreen-500: #8BC34A;
+$lime-500: #CDDC39;
+$yellow-500: #FFEB3B;
+$amber-500: #FFC107;
+$orange-500: #FF9800;
+$deepOrange-500: #FF5722;
+$brown-500: #795548;
+$grey-500: #9E9E9E;
+$blueGrey-500: #607D8B;
+
+/**
+ * https://www.codeschool.com/
+ */
+$color--ruby: #b24626;
+$color--javascript: #d7a627;
+$color--html-css: #31a480;
+$color--ios: #54588a;
+$color--electives: #585a5b;
+$color--git: #d67428;
+
+// html-css
+$html: #87C71D;
+$html5: #f14a29;
+$css: #07B3D3;
+$css3: #0092bf;
+
+$fontawesome: #1fa67a;
+$responsive: #e18728;
+
+$bootstrap: #6f5499;
+$alice: #7CAE23;
+$amazeui: #00aeee;
+
+$less: #1d365d;
+$sass: #c6538c;
+$stylus: #a1bc06;
+$compass: #fb292d;
+
+$svg: #ff9900;
+
+// javascript
+$javascript: $color--javascript;
+
+$ajax: $black;
+$json: #555555;
+
+$jquery: #0769AD;
+$jquery-ui: #B24926;
+$jquery-mobile: #108040;
+$qunitjs: #390F39;
+
+$zepto: #724dff;
+
+$require: green;
+$sea: #008B8B;
+
+$backbone: #002A41;
+$underscore: #0071B5;
+$angular: #A6120D;
+$ember: #f23818;
+$knockout: #A71500;
+
+$arale: #3F9EB3;
+
+$coffee: #191933;
+
+// node
+$node: #80bd01;
+$grunt: #e48632;
+$gulp: #e74c3c;
+
+// git
+$markdown: #4a525a;
+$git: #f14e32;
+$svn: #417FDA;
+
+// os
+$windows: #00BCF2;
+$ubuntu: #dd4814;
+$centos: #2a6496;
+$mac: $black;
+
+// server
+$apache: #C79900;
+$tomcat: rgb(209, 164, 26); // dark: rgb(209, 164, 26); | light: rgb(255, 220, 118);
+$ant: #a81c7d;
+$nginx: #00B140;
+
+// database
+$mysql: #00759f;
+$postgresql: #0085B0;
+$mongo: rgb(90,172,65);
+
+// code
+$java: $red;
+$php: #8892BF;
+$perl: #A4C5EB;
+$ruby: $color--ruby;
+$python: #2b5b84;
+
+$wordpress: #444444;
+$drupal: #0678be;
+
+$yii: #3B6FBA;
+$yaf: #393939;
+$laravel: #f4645f;
+
+// mobile
+$ios: rgba(0,0,0,0.6);
+$android: #A4C639;

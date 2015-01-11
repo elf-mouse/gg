@@ -1,0 +1,77 @@
+// position: relative;
+@mixin scaleBorder($size: 88px) {
+  display: block;
+  width: $size;
+  height: $size;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+@mixin scaleBorderIcon($size: 88px) {
+  position: absolute;
+  z-index: 1;
+  @include scaleBorder($size);
+  border: 2px solid;
+  line-height: $size;
+  text-align: center;
+  transition: all 0.2s;
+}
+@mixin scaleBorderBg($size: 88px, $bgColor: white) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include scaleBorder($size);
+  margin: (-$size/2) 0 0 (-$size/2);
+  content: '';
+  background-color: $bgColor;
+  transition: transform 0.2s, opacity 0.4s;
+}
+@mixin borderZoomIn($className, $bgColor, $color) {
+  .#{$className} {
+    background-color: $bgColor;
+    i::before {
+      background-color: $color;
+      color: $bgColor;
+      border-color: $bgColor;
+    }
+    i::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+    &:hover {
+      i::before {
+        background-color: $bgColor;
+        color: $color;
+        border-color: $color;
+      }
+      i::after {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  }
+}
+@mixin borderZoomOut($bgColor, $color) {
+  .#{$className} {
+    background-color: $bgColor;
+    i::before {
+      background-color: $bgColor;
+      color: $color;
+      border-color: $color;
+    }
+    i::after {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    &:hover {
+      i::before {
+        background-color: $color;
+        color: $bgColor;
+        border-color: $bgColor;
+      }
+      i::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}

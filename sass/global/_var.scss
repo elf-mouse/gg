@@ -1,0 +1,32 @@
+@import 'theme';
+
+/**
+ * zIndex (by Elf-mousE)
+ * =====================
+ * IE/FireFox/Safari = {
+ * 	min: -2147483648,
+ * 	max:  2147483647
+ * }
+ * Opera = {
+ *	min: -2147483584,
+ *	max:  2147483584
+ * }
+ */
+// for base
+$z-1: -1;
+$z0: 0;
+$z1: 1;
+// for header or footer
+$z9: 9;
+$z10: 10;
+$z11: 11;
+// for nav or menu or sidebar
+$z99: 99;
+$z100: 100;
+$z101: 101;
+// for modal
+$z999: 999;
+$z1000: 1000;
+$z1001: 1001;
+// for newbie guide
+$z9999: 9999;
