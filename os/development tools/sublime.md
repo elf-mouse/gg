@@ -16,3 +16,31 @@ for Sublime Text 2
 2. Browse up a folder and then into the `Installed Packages/` folder
 3. Download [Package Control.sublime-package](https://packagecontrol.io/Package%20Control.sublime-package) and copy it into the `Installed Packages/` directory
 4. Restart Sublime Text
+
+### Packages
+
+* Git
+* GitGutter
+* Emmet
+* All Autocomplete
+* Terminal
+* SublimeREPL
+* ColorPicker
+* MarkdownPreview
+* DocBlockr
+
+- - -
+
+* JavaScript Next
+* CSS3
+* SCSS
+* Better Coffeescript
+* Color Highlighter
+* Sublime Linter
+* Solarized Dark
+* Cobalt2
+* Goto Anything
+
+- - -
+
+* HTML/CSS/JS Prettify
