@@ -1,8 +1,0 @@
-/* line 2, ../sass/ie.scss */
-.lt-ie9 .no-ie {
-  display: none !important;
-}
-/* line 6, ../sass/ie.scss */
-.lt-ie9 .ie {
-  display: block;
-}
