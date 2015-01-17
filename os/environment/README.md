@@ -2,7 +2,7 @@
 
 Author: N.[Elf-mousE](http://elf-mouse.me/)
 
-* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Java Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 > C:\Program Files\Java\jdk{version}\bin  
 > `java -version`
 
