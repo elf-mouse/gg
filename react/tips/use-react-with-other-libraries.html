@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+    <script src="../../bower_components/jquery/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var mountNode = document.getElementById('example');
+
+    var App = React.createClass({
+      getInitialState: function() {
+        return {myModel: new myBackboneModel({items: [1, 2, 3]})};
+      },
+
+      componentDidMount: function() {
+        $(this.refs.placeholder.getDOMNode()).append($('<span />'));
+      },
+
+      componentWillUnmount: function() {
+        // Clean up work here.
+      },
+
+      shouldComponentUpdate: function() {
+        // Let's just never update this component again.
+        return false;
+      },
+
+      render: function() {
+        return <div ref="placeholder"/>;
+      }
+    });
+
+    React.render(<App />, mountNode);
+    </script>
+  </body>
+</html>

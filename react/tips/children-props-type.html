@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var mountNode = document.getElementById('example');
+
+    if (true) {
+      var GenericWrapper = React.createClass({
+        componentDidMount: function() {
+          console.log(Array.isArray(this.props.children)); // => true
+        },
+        render: function() {
+          return <div />;
+        }
+      });
+
+      React.render(
+        <GenericWrapper><span/><span/><span/></GenericWrapper>,
+        mountNode
+      );
+    } else {
+      var GenericWrapper = React.createClass({
+        componentDidMount: function() {
+          console.log(Array.isArray(this.props.children)); // => false
+
+          // warning: yields 5 for length of the string 'hello', not 1 for the length of the non-existant array wrapper!
+          console.log(this.props.children.length);
+        },
+        render: function() {
+          return <div />;
+        }
+      });
+
+      React.render(<GenericWrapper>hello</GenericWrapper>, mountNode);
+    }
+    </script>
+  </body>
+</html>

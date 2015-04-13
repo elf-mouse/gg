@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var imgUrl = '../img/logo.svg';
+    var mountNode = document.getElementById('example');
+
+    var divStyle = {
+      width: 600,
+      height: 600,
+      color: 'white',
+      backgroundImage: 'url(' + imgUrl + ')',
+      WebkitTransition: 'all', // note the capital 'W' here
+      msTransition: 'all' // 'ms' is the only lowercase vendor prefix
+    };
+
+    React.render(<div style={divStyle}>Hello World!</div>, mountNode);
+    </script>
+  </body>
+</html>

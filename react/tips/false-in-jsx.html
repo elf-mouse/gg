@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example1"></div>
+    <div id="example2"></div>
+    <div id="example3"></div>
+    <script type="text/jsx">
+    var mountNode1 = document.getElementById('example1');
+    var mountNode2 = document.getElementById('example2');
+    var mountNode3 = document.getElementById('example3');
+
+    React.render(<div id={false} />, mountNode1);
+    React.render(<input value={false} />, mountNode2);
+    React.render(<div>{false}</div>, mountNode3);
+    </script>
+  </body>
+</html>

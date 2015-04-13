@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var mountNode = document.getElementById('example');
+
+    React.render(<input value="hi" />, mountNode);
+
+    setTimeout(function() {
+      React.render(<input value={null} />, mountNode);
+    }, 1000);
+    </script>
+  </body>
+</html>

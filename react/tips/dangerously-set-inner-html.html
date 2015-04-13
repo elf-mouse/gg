@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var mountNode = document.getElementById('example');
+
+    function createMarkup() { return {__html: 'First &middot; Second'}; };
+
+    React.render(
+      <div dangerouslySetInnerHTML={createMarkup()} />, mountNode
+    );
+    </script>
+  </body>
+</html>

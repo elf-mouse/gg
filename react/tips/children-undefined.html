@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var mountNode = document.getElementById('example');
+
+    var App = React.createClass({
+      componentDidMount: function() {
+        // This doesn't refer to the `span`s! It refers to the children between
+        // last line's `<App></App>`, which are undefined.
+        console.log(this.props.children);
+      },
+
+      render: function() {
+        return <div><span/><span/></div>;
+      }
+    });
+
+    React.render(<App></App>, mountNode);
+    </script>
+  </body>
+</html>

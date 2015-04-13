@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../bower_components/react/react.js"></script>
+    <script src="../../bower_components/react/JSXTransformer.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/jsx">
+    var mountNode = document.getElementById('example');
+
+    var Box = React.createClass({
+      getInitialState: function() {
+        return {windowWidth: window.innerWidth};
+      },
+
+      handleResize: function(e) {
+        this.setState({windowWidth: window.innerWidth});
+      },
+
+      componentDidMount: function() {
+        window.addEventListener('resize', this.handleResize);
+      },
+
+      componentWillUnmount: function() {
+        window.removeEventListener('resize', this.handleResize);
+      },
+
+      render: function() {
+        return <div>Current window width: {this.state.windowWidth}</div>;
+      }
+    });
+
+    React.render(<Box />, mountNode);
+    </script>
+  </body>
+</html>
