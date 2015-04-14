@@ -9,11 +9,13 @@
     <script type="text/jsx">
     var mountNode = document.getElementById('example');
 
-    function createMarkup() { return {__html: 'First &middot; Second'}; };
+    var MyComponent = React.createClass({
+       render: function() {
+         return <div><div /><span /></div>
+       }
+    });
 
-    React.render(
-      <div dangerouslySetInnerHTML={createMarkup()} />, mountNode
-    );
+    React.render(<MyComponent />, mountNode);
     </script>
   </body>
 </html>
