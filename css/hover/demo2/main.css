@@ -1,0 +1,45 @@
+.pic {
+  position: relative;
+  width: 604px;
+  height: 388px;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+}
+/* 遮罩层透明度改变效果 */
+
+#mask1 {
+  background-color: chocolate;
+  opacity: 0;
+}
+
+.pic:hover #mask1 {
+  opacity: 0.3;
+}
+
+#mask2 {
+  background-color: black;
+  opacity: 0.3;
+}
+
+.pic:hover #mask2 {
+  opacity: 0;
+}
+/* 渐变效果 */
+
+#mask3 {
+  background: linear-gradient(top, orange, chocolate);
+  background: -webkit-linear-gradient(top, orange, chocolate);
+  background: -moz-linear-gradient(top, orange, chocolate);
+  opacity: 0.5
+}
+
+.pic:hover #mask3 {
+  opacity: 0;
+}

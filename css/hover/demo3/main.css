@@ -1,0 +1,44 @@
+img {
+  transition: all 1s;
+}
+
+#img1:hover {
+  transform: translateX(20px);
+}
+
+#img2:hover {
+  transform: scale(1.2, 1.2);
+}
+
+#img3:hover {
+  transform: rotate(360deg);
+}
+
+.pic {
+  position: relative;
+  width: 604px;
+  height: 388px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.pic:hover {
+  transform: translateZ(-194px) rotateX(90deg);
+}
+
+.pic img {
+  transform: translateZ(194px);
+  transition: all 1s;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform: rotateX(-90deg) translateZ(194px);
+  transition: all 1s;
+  color: white;
+}

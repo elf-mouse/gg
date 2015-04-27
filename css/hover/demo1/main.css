@@ -1,0 +1,24 @@
+/* 减少透明度 */
+
+#pic1 {
+  opacity: 1;
+}
+
+#pic1:hover {
+  opacity: 0.5;
+}
+/* 增加透明度 */
+
+#pic2 {
+  opacity: 0.5;
+}
+
+#pic2:hover {
+  opacity: 1;
+}
+/* 过渡效果 */
+
+#pic1,
+#pic2 {
+  transition: 1s;
+}
