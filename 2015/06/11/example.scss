@@ -1,0 +1,11 @@
+@import 'breakpoint';
+.box-2 {
+  background-color: green;
+  width: 10%;
+  @include break-point("xlarge") {
+    width: 100%
+  }
+  @include break-point("small") {
+    width: 25%
+  }
+}
